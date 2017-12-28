@@ -1,0 +1,261 @@
+html {
+    min-width: 1000px !important;
+    min-height: 100vh !important;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh !important;
+    min-width: 1000px !important;
+    padding: 0;
+    margin: 0;
+    background-color: #E8EAF6;
+    position: relative;
+}
+
+#AdminFooter {
+    height: 70px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    line-height: 70px;
+    background-color: #1A237E;
+    color: #E8EAF6;
+    font-weight: 300;
+    box-shadow: 0px -5px 30px black;
+    min-width: 1000px !important;
+}
+
+#AdminHeader {
+    height: 70px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+    line-height: 70px;
+    background-color: #1A237E;
+    color: #E8EAF6;
+    font-weight: 300;
+    box-shadow: 0px 5px 30px black;
+}
+
+.AdminSection {
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 80%;
+    max-width:  1000px;
+    background-color: white;
+    box-shadow: 5px 5px 30px;
+}
+
+.AdminSection > .Title {
+    font-size: 30px;
+    width: 95%;
+    margin: 0 auto;
+    margin: 10px 20px;
+    font-weight: 300;
+    padding-top: 10px;
+}
+
+.AdminSection > .Container {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+#WidgetsFooterSeparator {
+    content: "";
+    height: 150px;
+    display: block;
+    width: 100%;
+}
+
+.Container > form {
+    width: 100%;
+    text-align: right;
+}
+
+.Container > input[type=text] {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 25px;
+    border: 0px solid transparent;
+    font-size: 20px;
+    border-bottom: 1px solid #2F2F2F;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.Container > input[type=button] {
+    font-size: 17px;
+    border-bottom: 1px solid #2F2F2F;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 30px;
+    right: 0;
+    border-radius: 10px;
+    border: 1px solid #2F2F2F;
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+    width: 15%;
+}
+
+.Container > form > input[type=text] {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 25px;
+    border: 0px solid transparent;
+    font-size: 20px;
+    border-bottom: 1px solid #2F2F2F;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.Container > form > input[type=text]:focus {
+    outline: 0;
+}
+
+.Container > form > input[type=submit] {
+    font-size: 17px;
+    border-bottom: 1px solid #2F2F2F;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 30px;
+    right: 0;
+    border-radius: 10px;
+    border: 1px solid #2F2F2F;
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.Container > form > input[type=submit]:hover {
+    background-color: #2F2F2F;
+    color: white;
+}
+
+.Container > form > input[type=submit]:focus {
+    outline: 0;
+}
+
+.Container > h3 {
+    font-family: inherit;
+}
+
+.Container > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.TableHeader > td, .TableHeader {
+    border-bottom: 3px solid #2F2F2F;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+td, th {
+    font-weight: 400;
+    padding-top: 15px;
+}
+
+.alert {
+    color: red;
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.abtn {
+    color: #2F2F2F;
+    background-color: transparent;
+    border: 1px solid #2F2F2F;
+    border-radius: 10px;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.abtn:hover {
+    background-color: #2F2F2F;
+    color: white;
+    box-shadow: 5px 5px 30px;
+}
+
+.borderRow1 {
+    border-bottom: 1px solid #2F2F2F;
+}
+
+.NonBorderForm > input[type=text] {
+    border: 0;
+    background-color: transparent;
+    outline: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #2F2F2F;
+    transition: 300ms;
+    width: 80%;
+    padding: 5px 5px;
+    height: 30px;
+    font-size: 20px;
+}
+
+    .NonBorderForm > input[type=text]:hover {
+        outline: 0;
+        background-color: #2F2F2F;
+        color: whitesmoke;
+        transition: 300ms;
+    }
+
+    .NonBorderForm > input[type=text]:focus {
+        outline: 0;
+        background-color: #2F2F2F;
+        border-radius: 10px;
+        color: whitesmoke;
+    }
+
+.NonBorderForm > input[type=submit] {
+    border: 0;
+    background-color: transparent;
+    outline: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #2F2F2F;
+    transition: 300ms;
+    width: 15%;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+    .NonBorderForm > input[type=submit]:hover {
+        outline: 0;
+        background-color: #2F2F2F;
+        color: whitesmoke;
+        transition: 300ms;
+        border-radius: 10px;
+    }
+
+    .NonBorderForm > input[type=submit]:focus {
+        outline: 0;
+        background-color: #2F2F2F;
+        color: whitesmoke;
+    }
+
+.TabelkaOpisInside {
+    max-width: 300px;
+}
+
+.dwiesciepxPhoto {
+    height: 150px;
+}

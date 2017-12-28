@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using FotoUPawla20.Data;
 using FotoUPawla20.Models;
 using FotoUPawla20.Services;
+using FotoUPawla20.Models.Database;
 
 namespace FotoUPawla20
 {
@@ -32,6 +33,10 @@ namespace FotoUPawla20
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            //Dodawanie własnych tabel do bazy danych
+            //services.AddDbContext<CustomModelsContext>(options => options.UseSqlServer("DefaultConnection"));
+            services.AddDbContext<CustomModelsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();

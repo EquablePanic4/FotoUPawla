@@ -1,0 +1,612 @@
+@media all and (max-width:999px) {
+    #Nawigator {
+        list-style-type: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        z-index: 100;
+        background-color: #FFFFFF;
+        margin: 0;
+        padding: 0;
+    }
+
+    .NaviLeft {
+        display: none;
+    }
+
+    .NaviRight {
+        display: none;
+    }
+
+    .NaviCenter > div {
+        width: 100%;
+        height: 80px;
+        background-image: url('../../images/home/logo.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    #MenuMiniBtn {
+        position: relative;
+        height: 100%;
+        width: 120px;
+        float: right;
+        z-index: 100;
+        margin-right: 20px;
+        background-color: #3F51B5;
+        border: 0 solid transparent;
+        color: #E8EAF6;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    #MenuMiniBtn:hover {
+        background-color: #2962FF;
+        font-weight: 400;
+    }
+
+    #MenuMiniBtn:focus {
+        outline: 0;
+    }
+
+    .QuoteBox {
+        display: none;
+        font-family: 'Open Sans', sans-serif;
+        color: #FAFAFA;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: rgba(33, 33, 33, 0.4);
+        width: 100%;
+    }
+
+    .QuoteBox > h1 {
+        font-size: 20px;
+        font-weight: 400;
+        width: 100%;
+    }
+
+    .QuoteBox > h2 {
+        font-size: 15px;
+        font-weight: 300;
+        width: 100%;
+    }
+
+    #Start {
+        width: 100%;
+        height: calc(100% - 80px);
+        position: absolute;
+        left: 0;
+        top: 80px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /*POZYCJONOWANIE SEGMENTÓW*/
+.PodstawowySegment {
+    position: absolute;
+}
+
+    #Segment1 {
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: calc(100% + 200px);
+    }
+
+    #Segment2 {
+        top: calc(100% + 1 * calc(100% + 200px));
+        left: 0;
+        width: 100%;
+        height: calc(100% + 200px);
+    }
+
+    #Segment3 {
+        top: calc(100% + 2 * calc(100% + 200px));
+        left: 0;
+        width: 100%;
+        height: calc(100% + 200px);
+    }
+
+    #Segment4 {
+        top: calc(100% + 3 * calc(100% + 200px));
+        left: 0;
+        width: 100%;
+        height: calc(100% + 200px);
+    }
+
+    #Segment5 {
+        top: calc(100% + 4 * calc(100% + 200px));
+        left: 0;
+        width: 100%;
+        height: calc(100% + 200px);
+    }
+
+    #Segment6 {
+        top: calc(100% + 5 * calc(100% + 200px));
+        left: 0;
+        width: 100%;
+        height: calc(100% + 200px);
+    }
+
+    #MiniStopka {
+        top: calc(100% + 6 * calc(100% + 200px) + 50px);
+        left: 0;
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        z-index: 100;
+        background-color: #1A237E;
+    }
+
+    #MiniStopka > h1 {
+        font-size: 25px;
+        color: #E8EAF6;
+        font-weight: 300;
+    }
+
+    #MiniStopka > h2 {
+        font-size: 30px;
+        color: #E8EAF6;
+        font-weight: 400;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    #MiniStopka > h3 {
+        font-size: 20px;
+        color: #E8EAF6;
+        font-weight: 300;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    #MiniStopka > img {
+        height: 100px;
+    }
+
+    #MiniStopka > h4 {
+        font-size: 15px;
+        color: #E8EAF6;
+        font-weight: 300;
+    }
+
+    #MiniStopka > h5 {
+        font-size: 13px;
+        color: #E8EAF6;
+        font-weight: 500;
+    }
+
+    .SegmentTittle {
+        height: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .AttachmentText {
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .ShadowDIVMini {
+        height: calc(100% - 200px);
+        width: 100%;
+    }
+
+    .SHViewer {
+        height: 100%;
+        width: 100%;
+        background-color: #2F2F2F;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    #Viewer2 {
+        background-color: #FAFAFA;
+        vertical-align: middle;
+        position: relative;
+    }
+
+    #KafelkowyKontener1 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 100%;
+        z-index: 101;
+    }
+
+    #PierwszyKafelekMetro1 {
+        margin-top: 5vh;
+    }
+
+    .KafelekMetro1 {
+        width: 90%;
+        margin: 0 auto;
+        height: 20%;
+        margin-top: 4vh;
+        vertical-align: middle;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        transition-duration: 400ms;
+        cursor: pointer;
+    }
+
+    .KafelekMetro1:hover {
+        box-shadow: inset 0 0 1000px 1000px #3F51B5;
+        transition: 400ms;
+    }
+
+    .KafelekMetro1 > .MetroText {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        font-size: 40px;
+        width: 100%;
+        color: #FAFAFA;
+        text-shadow: 3px 4px 5px #2F2F2F;
+        /*background-color: rgba(47, 47, 47, 0.3);*/
+        font-weight: 300;
+    }
+
+    .MetroText > a:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    .MetroText > a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .GaleryBtn {
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        height: 60px;
+        background-color: #3F51B5;
+        border: 0 solid transparent;
+        color: #E8EAF6;
+        font-size: 30px;
+        font-family: 'Open Sans', sans-serif;
+        text-shadow: 1px 1px 10px #2F2F2F;
+        font-weight: 300;
+        cursor: pointer;
+    }
+
+    .GaleryBtn:hover {
+        background-color: #2962FF;
+        font-weight: 400;
+    }
+
+    .GaleryBtn:focus {
+        outline: 0;
+    }
+
+    .LeftBtn {
+        left: 0;
+    }
+
+    .RightBtn {
+        right: 0;
+    }
+
+    .Mini-invisible {
+        display: none;
+    }
+
+    #OfertaBoxMini {
+        position: relative;
+        background-image: url('../../images/home/ozdobnik3.jpeg');
+        width: 100%;
+        height: 100%;
+    }
+
+    .NormalLine {
+        position: relative;
+    }
+
+    .KontenerKolumnyOferty {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        zoom: 90%;
+    }
+
+    .KontenerKolumnyOferty > ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 90vw;
+        margin: auto auto;
+        height: 90vh;
+        max-width: 400px;
+    }
+
+    .SuperOfertaUl {
+        background-color: #E8EAF6;
+    }
+
+    .NormalOfertaUl {
+        background-color: #FFFDE7;
+    }
+
+    .PakietTit {
+        font-size: 30px;
+        margin-top: 40px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		background-color: #FFC800;
+		box-shadow: 0px 1px 2px black;
+    }
+
+    .Point {
+		border-bottom: 2px solid #FFC800;
+		padding-bottom: 5px;
+		padding-top: 15px;
+		font-weight: 300;
+    }
+    
+    .Price {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		font-weight: 600;
+		font-size: 35px;
+    }
+    
+    .PakietTitS {
+		font-size: 40px;
+        padding-bottom: 10px;
+        margin-top: 40px;
+		padding-top: 10px;
+		background-color: #3F51B5;
+		box-shadow: 0px 1px 2px black;
+		color: #E8EAF6;
+	}
+
+	.PointS {
+		border-bottom: 1px solid #1A237E;
+		padding-top: calc(100% / 30);
+		padding-bottom: calc(100% / 30);
+	}
+
+	.NotPairPointS {
+		background-color: #C5CAE9;
+	}
+
+	.PodPointS {
+		font-size: 19px;
+		font-weight: 300;
+		display: inline-block;
+	}
+
+	.PriceS {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		font-weight: 600;
+		font-size: 40px;
+	}
+
+	.PriceS > b {
+		font-weight: 300;
+		font-size: 20px;
+		display: block;
+    }
+    
+    .SlickButton1 {
+        position: absolute;
+        top: 50%;
+        width: 60px;
+        height: 160px;
+        border: 1px solid transparent;
+        background-color: rgba(47, 47, 47, 0.3);
+        color: #E8EAF6;
+        font-size: 30px;
+        transition: 300ms;
+    }
+
+    .SlickButton1:hover {
+        border: 1px solid transparent;
+        background-color: rgba(232, 234, 346, 0.3);
+        color: #2F2F2F;
+        cursor: pointer;
+        transition: 300ms;
+    }
+
+    .SlickButton1:focus {
+        outline: 0;
+    }
+
+    #Slick1L {
+        left: 10px;
+    }
+
+    #Slick1R {
+        right: 10px;
+    }
+
+    #Viewer4 {
+        width: 100%;
+        background-color: #E8EAF6;
+        position: relative;
+    }
+
+    #Viewer4 > #sklep1 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #Viewer4 > #sklep1 > .tab1 {
+        font-size: 14px;
+        height: 80vh;
+        border-collapse: collapse;
+        width: 80vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .CasualRowRightCol {
+        border-right: 2px solid #3F51B5;
+        font-weight: 600;
+    }
+
+    .NaglowekTabeli {
+		border-bottom: 2px solid #3F51B5;
+    }
+
+    #Viewer4 > #sklep2 {
+        display: none;
+    }
+
+    #Viewer4 > #sklep3 {
+        display: none;
+    }
+
+    #Viewer4 > #sklep4 {
+        display: none;
+    }
+
+    #Viewer4 > #sklep5 {
+        display: none;
+    }
+
+    #ImprezyOkolicznosciowe {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+
+    .ImpOkoMetro {
+        width: 100%;
+        height: 100vh !important;
+        position: relative;
+    }
+
+    #IO18 {
+        background-color: blue;
+    }
+
+    #IOrc {
+        background-color: yellow;
+    }
+
+    #IOc {
+        background-color: red;
+    }
+
+    #IOi {
+        background-color: green;
+    }
+
+    #HardBigInvisible {
+        height: 100vh;
+    }
+    
+    #TouchToScroll {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        color: #FAFAFA;
+        text-shadow: 1px 1px 5px black;
+        z-index: 100;
+    }
+
+    #KafelkowyKontener2 {
+        text-align: center;
+        width: 100vw;
+    }
+
+    #CennikInformator {
+        font-size: 20px;
+        margin: 0 auto;
+        position: relative;
+        word-wrap: break-word;
+        text-align: center;
+        width: 100%;
+    }
+
+    #KafelkowyKontener2 > a > img {
+        height: 100px;
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+        display: block;
+        margin-top: 40px;
+    }
+
+    #info {
+        position: absolute;
+        top: 50%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    #info > h1 {
+        font-size: 25px;
+    }
+
+    #info > h2 {
+        font-size: 30px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    #info > h3 {
+        font-size: 20px;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    #info > h5 {
+        font-size: 15px;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    #info > h4 {
+        font-size: 13px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    #Segment6 {
+        background-color: #FAFAFA;
+    }
+
+    #Viewer5 {
+        background-color: #FAFAFA;
+        height: 100vh;
+        width: 100%;
+        vertical-align: middle;
+        text-align: center;
+        position: relative;
+    }
+
+    
+}

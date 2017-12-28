@@ -1,0 +1,76 @@
+﻿@{ Layout = null; }
+
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Strefa klienta</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+    <link href="~/css/Home/Responsive-Unusual.css" rel="stylesheet" />
+    <link href="~/css/Home/Responsive-mini.css" rel="stylesheet" />
+    <link href="~/css/Home/Responsive-BIG.css" rel="stylesheet" />
+    <link href="~/css/Client/StrefaKlienta.css" rel="stylesheet" />
+
+    <link rel="Shortcut icon" href="~/images/fup.ico">
+
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/jquery.unobtrusive-ajax.js"></script>
+</head>
+
+<body>
+    <!--Pasek nawigacyjny-->
+    <ul id="Nawigator">
+        <li class="NaviCenter">
+            <div onclick="location.href = '/Home/Index';"><button id="MenuMiniBtn">Strefa Klienta</button></div>
+        </li>
+    </ul>
+
+    <div id="StrefaKlientaContent">
+        <h1>Strefa klienta</h1>
+        <h2 id="StrefaKlientaInfo">Aby pobrać materiały wprowadź do formularza kod weryfikacyjny, który otrzymałeś.</h2>
+
+        <form asp-controller="Client" asp-action="WalidujKodKlienta" data-ajax="true" data-ajax-method="POST" data-ajax-loading="#LoadingDIV" data-ajax-update="#LinkReply" name="FormularzKlienta" id="FormularzKlienta">
+            <input type="text" name="KodKlienta" id="KodKlientaInput" placeholder="Wprowadź kod..." />
+            <input type="submit" name="SubmitKlientForm" id="SubmitKlientBtn" value="Zatwierdź" />
+        </form>
+
+        <div id="LoadingDIV" style="display: none;">
+            <h3>Trwa ładowanie, proszę czekać...</h3>
+        </div>
+        <div id="Reply">
+            <div id="LinkReply">
+                
+            </div>
+        </div>
+    </div>
+
+    <!--Stopka-->
+    <div id="StopkaRelatywna" class="Mini-invisible">
+        <ul>
+            <li id="StopkaLi0Relatywna"><b>Codli</b><br />Projektowanie nowoczesnych aplikacji</li>
+            <li id="StopkaLi1Relatywna"><b>Adres e-mail</b><br />kontakt@codli.eu</li>
+            <li id="StopkaLi2Relatywna"><b>Codli</b><br />Projektowanie nowoczesnych aplikacji</li>
+            <li id="StopkaLi3Relatywna"><b>Telefon</b><br />+48 883-761-687</li>
+        </ul>
+    </div>
+
+    <div id="MiniStopkaRelatywna" class="Big-Invisible">
+        <h1>Realizacja aplikacji</h1>
+        <h2>Codli</h2>
+        <h3>www.codli.eu</h3>
+        <img src="./Content/minicodli.png" alt="Logo Codli" />
+        <h4>Jesteś zainteresowany stroną bądź aplikacją internetową?</h4>
+        <h5>Nie czekaj, skontaktuj się z nami!</h5>
+    </div>
+    <!--Tutaj znajdują się wszystkie pozostałe elementy (włącznie ze stopką)-->
+</body>
+
+</html>

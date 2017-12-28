@@ -1,106 +1,1069 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model FotoUPawla20.Models.HomeViewModel
+@{
+    Layout = null;
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+<!doctype html>
+<html lang="pl">
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Foto u Pawła</title>
+    <link rel="Shortcut icon" href="~/images/fup.ico">
+    
+
+    <link href="~/css/Home/Responsive-BIG.css" rel="stylesheet" />
+    <link href="~/css/Home/Responsive-mini.css" rel="stylesheet" />
+    <link href="~/css/Home/Responsive-Unusual.css" rel="stylesheet" />
+    <link href="~/css/Home/slick-theme.css" rel="stylesheet" />
+    <link href="~/css/Home/slick.css" rel="stylesheet" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="~/js/skrypty.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/slick.min.js"></script>
+</head>
+
+<body>
+    <!--Pasek nawigacyjny-->
+    <ul id="Nawigator">
+        <li class="NaviLeft" onclick="StartBlock()">Start</li>
+        <li class="NaviLeft" onclick="Zdjecia()">Galeria</li>
+        <li class="NaviLeft" onclick="Fotoslub()">Fotografia ślubna</li>
+        <li class="NaviLeft" onclick="Oslub()">Oferta ślubna</li>
+
+        <li class="NaviCenter">
+            <div onclick="StartBlock()"><button id="MenuMiniBtn">Strefa Klienta</button></div>
+        </li>
+
+        <li class="NaviRight" onclick="Ofoto()">Oferta fotografii</li>
+        <li class="NaviRight" onclick="Osklep()">Oferta sklepu</li>
+        <li class="NaviRight" onclick="Kont()">Kontakt</li>
+        <li class="NaviRight" id="StrefaKlientaLi" onclick="location.href = '/Client/Index';" > Strefa klienta</li>
+    </ul>
+
+    <div id="Start" style="background-image: url(@Model.ObrazekStartowy)">
+        <div id="CytatBox1" class="QuoteBox">
+            <h1>
+                <blockquote>
+                    "Fotografia jako potężne medium wyrazu i komunikacji oferuje nieskończoną różnorodność postrzegania, interpretacji i
+                    działania."
+                </blockquote>
+            </h1>
+            <h2>Ansel Adams</h2>
+        </div>
+
+        <div id="CytatBox2" class="QuoteBox">
+            <h1>
+                <blockquote>"Dobre zdjęcie, to wiedzieć gdzie się ustawić."</blockquote>
+            </h1>
+            <h2>Ansel Adams</h2>
+        </div>
+
+        <div id="CytatBox3" class="QuoteBox">
+            <h1>
+                <blockquote>"Nie istnieją reguły opisujące dobrą fotografię, są tylko dobre fotografie."</blockquote>
+            </h1>
+            <h2>Ansel Adams</h2>
+        </div>
+
+        <div id="CytatBox4" class="QuoteBox">
+            <h1>
+                <blockquote>"Fotografować to znaczy wstrzymać oddech, uruchamiając wszystkie nasze zdolności w obliczu ulotnej rzeczywistości."</blockquote>
+            </h1>
+            <h2>Henri Cartier-Bresson</h2>
+        </div>
+
+        <div id="CytatBox5" class="QuoteBox">
+            <h1>
+                <blockquote>
+                    "Myśl o zdjęciu zawsze przed jego zrobieniem i po. Nigdy w trakcie. Sekretem jest czas. Nie musisz działać szybko. Fotografowany
+                    model musi zapomnieć o tobie, a gdy już to się stanie, musisz działać bardzo szybko."
+                </blockquote>
+            </h1>
+            <h2>Henri Cartier-Bresson</h2>
+        </div>
+
+        <div id="CytatBox6" class="QuoteBox">
+            <h1>
+                <blockquote>"Kiedy fotografuję, to otwartym okiem patrzę na świat, a zamkniętym spoglądam w głąb siebie."</blockquote>
+            </h1>
+            <h2>Henri Cartier-Bresson</h2>
+        </div>
+
+        <div id="CytatBox7" class="QuoteBox">
+            <h1>
+                <blockquote>
+                    "Fotografia jest dla mnie sztuką obserwacji. To umiejętność znalezienia czegoś interesującego w zwykłym miejscu. Odkryłem,
+                    że nie jest zbyt istotne co widać – istotne jest to, co potrafisz z tym zrobić."
+                </blockquote>
+            </h1>
+            <h2>Elliott Erwitt</h2>
+        </div>
+
+        <div id="CytatBox8" class="QuoteBox">
+            <h1>
+                <blockquote>"Fotografie to kęsy czasu, które można wziąć do ręki."</blockquote>
+            </h1>
+            <h2>Angela Carter</h2>
+        </div>
+
+        <div id="CytatBox9" class="QuoteBox">
+            <h1>
+                <blockquote>
+                    "Im mniej opisowe jest zdjęcie, tym bardziej pobudza ono wyobraźnię. Im mniej informacji, tym więcej aluzji; im mniej
+                    prozy, tym więcej poezji."
+                </blockquote>
+            </h1>
+            <h2>Ernst Haas</h2>
+        </div>
+
+        <div id="CytatBox10" class="QuoteBox">
+            <h1>
+                <blockquote>"Jeżeli nie jesteś zdolny widzieć więcej ponadto co widzialne, nie możesz zobaczyć niczego."</blockquote>
+            </h1>
+            <h2>Ruth Bernhard</h2>
+        </div>
+
+        <div id="CytatBox11" class="QuoteBox">
+            <h1>
+                <blockquote>
+                    "Myślę, że fotografie powinny prowokować i nie pokazywać tego, co jest już znane. Nie wymaga ani wielkiej siły ani magii
+                    odtworzenie czyjejś twarzy na zdjęciu. Magią jest postrzeganie ludzi w zupełnie nowy sposób."
+                </blockquote>
+            </h1>
+            <h2>Duane Michals</h2>
+        </div>
+
+        <div id="CytatBox12" class="QuoteBox">
+            <h1>
+                <blockquote>"Rutynowo fotografuję w myśli wszystko, co widzę."</blockquote>
+            </h1>
+            <h2>Minor White</h2>
+        </div>
+
+        <div id="CytatBox13" class="QuoteBox">
+            <h1>
+                <blockquote>"Fotografując staraj się pokazać to czego bez ciebie, nikt by nie zobaczył."</blockquote>
+            </h1>
+            <h2>Robert Bresson</h2>
+        </div>
+
+        <div id="CytatBox14" class="QuoteBox">
+            <h1>
+                <blockquote>"Pragnęłam utrwalić wszelkie przejawy piękna, jakie pojawiły się przede mną, i wreszcie pragnienie to zostało spełnione."</blockquote>
+            </h1>
+            <h2>Julia Margaret Cameron</h2>
+        </div>
+
+        <div id="CytatBox15" class="QuoteBox">
+            <h1>
+                <blockquote>"W doskonałej fotografii chodzi o głębię uczucia, nie o głębię ostrości."</blockquote>
+            </h1>
+            <h2>Peter Adams</h2>
+        </div>
+
+        <div id="CytatBox16" class="QuoteBox">
+            <h1>
+                <blockquote>
+                    "Wielu ludzi pyta mnie, dlaczego wciąż noszę ze sobą aparat i dlaczego robię zdjęcia. Wówczas odpowiadam „a dlaczego
+                    Ty jesz?”."
+                </blockquote>
+            </h1>
+            <h2>James Lalropui Keivom</h2>
+        </div>
+
+        <div id="CytatBox17" class="QuoteBox">
+            <h1>
+                <blockquote>"Fotografia nie ma zasad. To nie sport. Ważny jest efekt, a nie sposób, w jaki został osiągnięty."</blockquote>
+            </h1>
+            <h2>Bill Brandt</h2>
+        </div>
+
+        <script>
+			LoadStartImage();
+        </script>
+    </div>
+
+    <!--Segment z galerią główną-->
+    <div id="Segment1" class="PodstawowySegment">
+        <div class="SegmentTittle" style="background-image: url(images/Home/textback0.jpeg);">
+            <div class="AttachmentText" style="background-image: url(images/Home/ga.png);"></div>
+        </div>
+        <div class="ShadowDIVMini">
+            
+            <!--Skrypt do obsługi pierwszej galerii-->
+            <script>
+                var Urls1 = new Array(
+                    @Html.Raw(Model.SkryptGalerii1())
+                );
+
+                var g1PhotosInt = @Html.Raw(Model.LiczbaZdjecWGalerii1());
+
+                function Galeria1(arg) {
+                    if (arg == 'p') {
+                        gal1--;
+
+                        if (gal1 == -1)
+                            gal1 = g1PhotosInt;
+                    }
+
+                    else
+                        gal1++;
+
+                    if (gal1 == (g1PhotosInt + 1))
+                        gal1 = 0;
+
+                    $('#Viewer1').css('background-image', 'url(' + Urls1[gal1] + ')');
+                }
+            </script>
+
+            <div class="SHViewer" id="Viewer1" style="width: 100%;">
+                <button class="LeftBtn GaleryBtn" onClick="Galeria1('p')"><</button>
+                <button class="RightBtn GaleryBtn" onClick="Galeria1('n')">></button>
+            </div>
+
+            <script>
+                $('#Viewer1').css('background-image', 'url(' + Urls1[0] + ')');
+            </script>
+        </div>
+    </div>
+
+    <!--Segment z fotografią ślubną-->
+    <div id="Segment2" class="PodstawowySegment">
+        <div class="SegmentTittle" style="background-image: url(images/Home/textback1.jpeg);">
+            <div class="AttachmentText" style="background-image: url(images/Home/fs.png);"></div>
+        </div>
+        <div class="ShadowDIVMini">
+
+            <script>
+                //Zmienne
+                var gal1 = 0;
+                var ContePrzygotowania = 0;
+                var ConteCeremonia = 0;
+                var ConteWesele = 0;
+                var ContePlener = 0;
+
+                //Skrypty zachowania przycisków
+                function Show10() {
+                    //Zachowanie wciśniętego przycisku
+                    $('#AdvGal1').css('background-color', '#2962FF');
+                    $('#AdvGal1').css('font-weight', '400');
+                    $('#AdvGal1').disabled = true;
+
+                    //Zachowanie pozostałych przycisków
+                    $('#AdvGal2').css('background-color', '#3F51B5');
+                    $('#AdvGal2').css('font-weight', '300');
+                    $('#AdvGal2').disabled = false;
+
+                    $('#AdvGal3').css('background-color', '#3F51B5');
+                    $('#AdvGal3').css('font-weight', '300');
+                    $('#AdvGal3').disabled = false;
+
+                    $('#AdvGal4').css('background-color', '#3F51B5');
+                    $('#AdvGal4').css('font-weight', '300');
+                    $('#AdvGal4').disabled = false;
+                }
+                function Show11() {
+                    //Zachowanie wciśniętego przycisku
+                    $('#AdvGal2').css('background-color', '#2962FF');
+                    $('#AdvGal2').css('font-weight', '400');
+                    $('#AdvGal2').disabled = true;
+
+                    //Zachowanie pozostałych przycisków
+                    $('#AdvGal1').css('background-color', '#3F51B5');
+                    $('#AdvGal1').css('font-weight', '300');
+                    $('#AdvGal1').disabled = false;
+
+                    $('#AdvGal3').css('background-color', '#3F51B5');
+                    $('#AdvGal3').css('font-weight', '300');
+                    $('#AdvGal3').disabled = false;
+
+                    $('#AdvGal4').css('background-color', '#3F51B5');
+                    $('#AdvGal4').css('font-weight', '300');
+                    $('#AdvGal4').disabled = false;
+                }
+                function Show12() {
+                    //Zachowanie wciśniętego przycisku
+                    $('#AdvGal3').css('background-color', '#2962FF');
+                    $('#AdvGal3').css('font-weight', '400');
+                    $('#AdvGal3').disabled = true;
+
+                    //Zachowanie pozostałych przycisków
+                    $('#AdvGal2').css('background-color', '#3F51B5');
+                    $('#AdvGal2').css('font-weight', '300');
+                    $('#AdvGal2').disabled = false;
+
+                    $('#AdvGal1').css('background-color', '#3F51B5');
+                    $('#AdvGal1').css('font-weight', '300');
+                    $('#AdvGal1').disabled = false;
+
+                    $('#AdvGal4').css('background-color', '#3F51B5');
+                    $('#AdvGal4').css('font-weight', '300');
+                    $('#AdvGal4').disabled = false;
+                }
+                function Show13() {
+                    //Zachowanie wciśniętego przycisku
+                    $('#AdvGal4').css('background-color', '#2962FF');
+                    $('#AdvGal4').css('font-weight', '400');
+                    $('#AdvGal4').disabled = true;
+
+                    //Zachowanie pozostałych przycisków
+                    $('#AdvGal2').css('background-color', '#3F51B5');
+                    $('#AdvGal2').css('font-weight', '300');
+                    $('#AdvGal2').disabled = false;
+
+                    $('#AdvGal3').css('background-color', '#3F51B5');
+                    $('#AdvGal3').css('font-weight', '300');
+                    $('#AdvGal3').disabled = false;
+
+                    $('#AdvGal1').css('background-color', '#3F51B5');
+                    $('#AdvGal1').css('font-weight', '300');
+                    $('#AdvGal1').disabled = false;
+                }
+
+                //Skrypt do obsługi galerii ceremoni, wesela, pleneru i przygotowań
+                var ChoosenOne = 1;
+
+                var UrlsPrzygotowania = new Array(
+                    @Html.Raw(Model.SkryptGaleriiPrzygotowania())
+                );
+
+                var UrlsCeremonia = new Array(
+                    @Html.Raw(Model.SkryptGaleriiCeremonia())
+                );
+
+                var UrlsWesele = new Array(
+                    @Html.Raw(Model.SkryptGaleriiWesele())
+                );
+
+                var UrlsPlener = new Array(
+                    @Html.Raw(Model.SkryptGaleriiPlener())
+                );
+
+                var PrzygotowaniaPhotosInt = @Html.Raw(Model.LiczbaZdjecWGaleriiPrzygotowania());
+                var CeremoniaPhotosInt = @Html.Raw(Model.LiczbaZdjecWGaleriiCeremonia());
+                var WeselePhotosInt = @Html.Raw(Model.LiczbaZdjecWGaleriiWesele());
+                var PlenerPhotosInt = @Html.Raw(Model.LiczbaZdjecWGaleriiPlener());
+
+                function PrzygotowaniaFunkcja(arg) {
+                    if (arg == 'p') {
+                        ContePrzygotowania--;
+
+                        if (ContePrzygotowania == -1)
+                            ContePrzygotowania = PrzygotowaniaPhotosInt;
+                    }
+
+                    else
+                        ContePrzygotowania++;
+
+                    if (ContePrzygotowania == (PrzygotowaniaPhotosInt + 1))
+                        ContePrzygotowania = 0;
+
+                    $('#Viewer2').css('background-image', 'url(' + UrlsPrzygotowania[ContePrzygotowania] + ')');
+                }
+
+                function CeremoniaFunkcja(arg) {
+                    if (arg == 'p') {
+                        ConteCeremonia--;
+
+                        if (ConteCeremonia == -1)
+                            ConteCeremonia = CeremoniaPhotosInt;
+                    }
+
+                    else
+                        ConteCeremonia++;
+
+                    if (ConteCeremonia == (CeremoniaPhotosInt + 1))
+                        ConteCeremonia = 0;
+
+                    $('#Viewer2').css('background-image', 'url(' + UrlsCeremonia[ConteCeremonia] + ')');
+                }
+
+                function WeseleFunkcja() {
+                    if (arg == 'p') {
+                        ConteWesele--;
+
+                        if (ConteWesele == -1)
+                            ConteWesele = WeselePhotosInt;
+                    }
+
+                    else
+                        ConteWesele++;
+
+                    if (ConteWesele == (WeselePhotosInt + 1))
+                        ConteWesele = 0;
+
+                    $('#Viewer2').css('background-image', 'url(' + UrlsWesele[ConteWesele] + ')');
+                }
+
+                function PlenerFunkcja() {
+                    if (arg == 'p') {
+                        ContePlener--;
+
+                        if (ContePlener == -1)
+                            ContePlener = PlenerPhotosInt;
+                    }
+
+                    else
+                        ContePlener++;
+
+                    if (ContePlener == (PlenerPhotosInt + 1))
+                        ContePlener = 0;
+
+                    $('#Viewer2').css('background-image', 'url(' + UrlsPlener[ContePlener] + ')');
+                }
+
+                function WybierzKategorieGalerii(arg) {
+                    switch (arg)
+                    {
+                        case 1:
+                            ChoosenOne = 1;
+                            Show10();
+                            $('#Viewer2').css('background-image', 'url(' + UrlsPrzygotowania[ContePrzygotowania] + ')');
+                            break;
+
+                        case 2:
+                            ChoosenOne = 2;
+                            Show11();
+                            $('#Viewer2').css('background-image', 'url(' + UrlsCeremonia[ConteCeremonia] + ')');
+                            break;
+
+                        case 3:
+                            ChoosenOne = 3;
+                            Show12();
+                            $('#Viewer2').css('background-image', 'url(' + UrlsWesele[ConteWesele] + ')');
+                            break;
+
+                        case 4:
+                            ChoosenOne = 4;
+                            Show13();
+                            $('#Viewer2').css('background-image', 'url(' + UrlsPlener[ContePlener] + ')');
+                            break;
+
+                        default:
+                            ChoosenOne = 1;
+                            Show10();
+                            $('#Viewer2').css('background-image', 'url(' + UrlsPrzygotowania[ContePrzygotowania] + ')');
+                            break;
+                    }
+                }
+
+                function WybierzFunkcjeDrugiejGalerii(arg) {
+                    switch (ChoosenOne) {
+                        case 1:
+                            PrzygotowaniaFunkcja(arg);
+                            break;
+
+                        case 2:
+                            CeremoniaFunkcja(arg);
+                            break;
+
+                        case 3:
+                            WeseleFunkcja(arg);
+                            break;
+
+                        case 4:
+                            PlenerFunkcja(arg);
+                            break;
+                    }
+                }
+            </script>
+
+            <div class="SHViewer" id="Viewer2">
+                <button class="LeftBtn GaleryBtn Mini-invisible" onClick="WybierzFunkcjeDrugiejGalerii('p')"><</button>
+                <button class="RightBtn GaleryBtn Mini-invisible" onClick="WybierzFunkcjeDrugiejGalerii('n')">></button>
+                <div class="Big-Invisible" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #ffffff; z-index: 100;"></div>
+
+                <!-- KAFELKI DO RESPONSYWNOŚCI MAŁEJ -->
+                <div id="KafelkowyKontener1" class="Big-Invisible">
+                    <div class="KafelekMetro1" id="PierwszyKafelekMetro1" style="background-image: url(images/Home/metro0.jpeg);">
+                        <div class="MetroText">@Html.ActionLink("Przygotowania", "GaleriaMobilna", "Home", new { Galeria = "Przygotowania" }, null)</div>
+                    </div>
+                    <div class="KafelekMetro1" style="background-image: url(images/Home/metro1.jpeg);">
+                        <div class="MetroText">Ceremonia</div>
+                    </div>
+                    <div class="KafelekMetro1" style="background-image: url(images/Home/metro2.jpeg);">
+                        <div class="MetroText">Wesele</div>
+                    </div>
+                    <div class="KafelekMetro1" style="background-image: url(images/Home/metro3.jpeg);">
+                        <div class="MetroText">Plener</div>
+                    </div>
+                </div>
+            </div>
+            <button id="AdvGal1" class="GalleryChoiceBtn Mini-invisible" onClick="WybierzKategorieGalerii(1)">Przygotowania</button>
+            <button id="AdvGal2" class="GalleryChoiceBtn Mini-invisible" onClick="WybierzKategorieGalerii(2)">Ceremonia</button>
+            <button id="AdvGal3" class="GalleryChoiceBtn Mini-invisible" onClick="WybierzKategorieGalerii(3)">Wesele</button>
+            <button id="AdvGal4" class="GalleryChoiceBtn Mini-invisible" onClick="WybierzKategorieGalerii(4)">Plener</button>
+
+            <script>
+                Show10();
+                $('#Viewer2').css('background-image', 'url(' + UrlsPrzygotowania[ContePrzygotowania] + ')');
+            </script>
+
+        </div>
+    </div>
+
+    <!--Segment z cennikiem ślubnym-->
+    <div id="Segment3" class="PodstawowySegment">
+        <div class="SegmentTittle" style="background-image: url(images/Home/textback2.jpeg);">
+            <div class="AttachmentText" style="background-image: url(images/Home/os.png);"></div>
+        </div>
+        <div class="ShadowDIVMini">
+            <div id="OfertaBox" class="Mini-invisible">
+                <div class="NormalCol NormalLine">
+                    <div class="KontenerKolumnyOferty">
+                        <ul class="NormalOfertaUl">
+                            <li class="PakietTit">Pakiet I</li>
+
+                            <li class="Point">Przygotowania</li>
+                            <li class="Point">Ceremonia Kościół<br /><b>lub</b><br />Urząd Cywilny</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="SuperCol NormalLine">
+                    <div class="KontenerKolumnyOferty">
+                        <ul class="SuperOfertaUl">
+                            <li class="PakietTitS">Pakiet II</li>
+
+                            <li class="PointS">Przygotowania</li>
+                            <li class="PointS NotPairPointS">Ceremonia Kościół/Urząd Cywilny</li>
+                            <li class="PointS">Wesele do oczepin</li>
+                            <li class="PointS NotPairPointS">Sesja plenerowa w innym dniu</li>
+                            <li class="PointS" style="border-bottom: 0px solid transparent; padding-bottom: 5px;">Fotoksiążki</li>
+                            <li class="PodPointS">30x30cm x1</li>
+                            <li class="PodPointS">20x20cm x2</li>
+                            <li class="PointS NotPairPointS" style="border-top: 1px solid #1A237E;">Pendrive w eleganckim opakowaniu</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="NormalCol NormalLine">
+                    <div class="KontenerKolumnyOferty">
+                        <ul class="NormalOfertaUl">
+                            <li class="PakietTit">Pakiet III</li>
+
+                            <li class="Point">Przygotowania</li>
+
+                            <li class="Point">Ceremonia Kościół<br /><b>lub</b><br />Urząd Cywilny</li>
+                            <li class="Point">Wesele do oczepin</li>
+                            <li class="Point">Pendrive w eleganckim opakowaniu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="OfertaBoxMini" class="Big-Invisible">
+                <div class="NormalCol NormalLine">
+                    <div class="KontenerKolumnyOferty">
+                        <ul class="NormalOfertaUl">
+                            <li class="PakietTit">Pakiet I</li>
+
+                            <li class="Point">Przygotowania</li>
+                            <li class="Point">Ceremonia Kościół<br /><b>lub</b><br />Urząd Cywilny</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="SuperCol NormalLine">
+                    <div class="KontenerKolumnyOferty">
+                        <ul class="SuperOfertaUl">
+                            <li class="PakietTitS">Pakiet II</li>
+
+                            <li class="PointS">Przygotowania</li>
+                            <li class="PointS NotPairPointS">Ceremonia Kościół/Urząd Cywilny</li>
+                            <li class="PointS">Wesele do oczepin</li>
+                            <li class="PointS NotPairPointS">Sesja plenerowa w innym dniu</li>
+                            <li class="PointS" style="border-bottom: 0px solid transparent; padding-bottom: 5px;">Fotoksiążki</li>
+                            <li class="PodPointS">30x30cm x1</li>
+                            <li class="PodPointS">20x20cm x2</li>
+                            <li class="PointS NotPairPointS" style="border-top: 1px solid #1A237E;">Pendrive w eleganckim opakowaniu</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="NormalCol NormalLine">
+                    <div class="KontenerKolumnyOferty">
+                        <ul class="NormalOfertaUl">
+                            <li class="PakietTit">Pakiet III</li>
+
+                            <li class="Point">Przygotowania</li>
+
+                            <li class="Point">Ceremonia Kościół<br /><b>lub</b><br />Urząd Cywilny</li>
+                            <li class="Point">Wesele do oczepin</li>
+                            <li class="Point">Pendrive w eleganckim opakowaniu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Big-Invisible">
+                <button id="Slick1L" class="SlickButton1"><</button>
+                <button id="Slick1R" class="SlickButton1">></button>
+            </div>
+        </div>
+    </div>
+
+    <!--Segment z cennikiem oferty okolicznosciowej-->
+    <div id="Segment4" class="PodstawowySegment">
+        <div class="SegmentTittle" style="background-image: url(images/Home/textback3.jpeg);">
+            <div class="AttachmentText" style="background-image: url(images/Home/io.png);"></div>
+        </div>
+        <div class="ShadowDIVMini">
+            <div id="HardBigInvisible">
+                <div id="TouchToScroll" class="Big-Invisible">Dotknij aby przesunąć</div>
+                <div class="Big-Invisible" id="ImprezyOkolicznosciowe">
+                    <div id="IO18" class="ImpOkoMetro Big-Invisible">Rozpędzeni</div>
+                    <div id="IOrc" class="ImpOkoMetro Big-Invisible">Prosto</div>
+                    <div id="IOc" class="ImpOkoMetro Big-Invisible">W stronę</div>
+                    <div id="IOi" class="ImpOkoMetro Big-Invisible">Słońca</div>
+                </div>
+            </div>
+
+            <div class="Big-Invisible Mini-invisible">
+                <button id="Slick2L" class="SlickButton1"><</button>
+                <button id="Slick2R" class="SlickButton1">></button>
+            </div>
+
+            <div class="Mini-invisible" id="Viewer3" style="width: 80%;">
+
+                <div id="s1">
+                    <div class="OpisCen">
+                        <p class="price">350zł</p> (do godz. 1.00)
+                    </div>
+                </div>
+
+                <div id="s2" style="display: none">
+                    <div class="OpisCen">
+                        <p class="price">400zł</p> (do godz. 1.00)
+                    </div>
+                </div>
+
+                <div id="s3" style="display: none">
+                    <div class="OpisCen">
+                        Kościół
+                        <p class="price">200zł</p> <br>Przygotowania + Kościół
+                        <p class="price">300zł</p>
+
+
+                    </div>
+                </div>
+
+                <div id="s4" style="display: none">
+                    <div class="OpisCen">
+                        Sesja plenerowa ( 3 godz.)
+                        <p class="price">300zł</p>
+                        Mini studio podczas imprezy
+                        <p class="price">50zł</p><br>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <button class="GalleryChoiceBtn Mini-invisible" id="s1btn" onclick="Show1()">18-nastki</button>
+            <button class="GalleryChoiceBtn Mini-invisible" id="s2btn" onclick="Show2()">Rocznica ślubu</button>
+            <button class="GalleryChoiceBtn Mini-invisible" id="s3btn" onclick="Show3()">Chrzciny</button>
+            <button class="GalleryChoiceBtn Mini-invisible" id="s4btn" onclick="Show4()">Inne</button>
+
+        </div>
+    </div>
+    <!--Segment ze sklepem-->
+    <div id="Segment5" class="PodstawowySegment">
+        <div class="SegmentTittle" style="background-image: url(images/Home/textback4.jpeg);">
+            <div class="AttachmentText" style="background-image: url(images/Home/s.png);"></div>
+        </div>
+        <div class="ShadowDIVMini">
+            <div class="SHViewer" id="Viewer4">
+                <!--Zawartośc opisu-->
+                <div id="sklep1">
+                    <table class="tab1 Mini-invisible">
+                        <tr class="NaglowekTabeli">
+                            <td><b>Format \ Ilość</b></td>
+                            <td><b>1 - 150 szt.</b></td>
+                            <td><b>151 - 300 szt.</b></td>
+                            <td><b>301 - 500 szt.</b></td>
+                            <td><b>500 - 700 szt.</b></td>
+                            <td><b>700+ szt.</b></td>
+                        </tr>
+                        <tr>
+                            <td class="CasualRowRightCol">9 x 13</td>
+                            <td>65 gr</td>
+                            <td>60 gr</td>
+                            <td>55 gr</td>
+                            <td>52 gr</td>
+                            <td>50 gr</td>
+                        </tr>
+                        <tr>
+                            <td class="CasualRowRightCol">10 x 15</td>
+                            <td>80 gr</td>
+                            <td>70 gr</td>
+                            <td>62 gr</td>
+                            <td>54 gr</td>
+                            <td>52 gr</td>
+                        </tr>
+                        <tr>
+                            <td class="CasualRowRightCol">13 x 18</td>
+                            <td>1,20 zł</td>
+                            <td>1,10 zł</td>
+                            <td>90 gr</td>
+                            <td>90 gr</td>
+                            <td>90 gr</td>
+                        </tr>
+                        <tr>
+                            <td class="CasualRowRightCol">15 x 21</td>
+                            <td>1,90 zł</td>
+                            <td>1,60 zł</td>
+                            <td>1,30 zł</td>
+                            <td>1,10 zł</td>
+                            <td>1,10 zł</td>
+                        </tr>
+                        <tr>
+                            <td class="CasualRowRightCol">18 x 24</td>
+                            <td>4,50 zł</td>
+                            <td>4,20 zł</td>
+                            <td>4,00 zł</td>
+                            <td>3,60 zł</td>
+                            <td>3,50 zł</td>
+                        </tr>
+                        <tr>
+                            <td class="CasualRowRightCol">20 x 25</td>
+                            <td>5,00 zł</td>
+                            <td>4,50 zł</td>
+                            <td>4,00 zł</td>
+                            <td>4,00 zł</td>
+                            <td>4,00 zł</td>
+                        </tr>
+                        <tr>
+                            <td class="CasualRowRightCol">21 x 30</td>
+                            <td>6,00 zł</td>
+                            <td>5,00 zł</td>
+                            <td>4,00 zł</td>
+                            <td>3,80 zł</td>
+                            <td>3,80 zł</td>
+                        </tr>
+                        <tr class="NaglowekTabeli">
+                            <td class="TrMargin"><b>Format \ Ilość</b></td>
+                            <td class="TrMargin"><b>1 - 4 szt.</b></td>
+                            <td class="TrMargin"><b>5 - 10 szt.</b></td>
+                            <td class="TrMargin"><b>11 - 49 szt.</b></td>
+                            <td class="TrMargin"><b>50 - 99 szt.</b></td>
+                            <td class="TrMargin"><b>100+ szt.</b></td>
+                        </tr>
+                        <tr>
+                            <td class="CasualRowRightCol">30 x 40</td>
+                            <td>20,00 zł</td>
+                            <td>18,00 zł</td>
+                            <td>16,00 zł</td>
+                            <td>14,00 zł</td>
+                            <td>12,00 zł</td>
+                        </tr>
+                    </table>
+
+                    <!-- KAFELKI DO RESPONSYWNOŚCI MAŁEJ -->
+                    <div id="KafelkowyKontener2" class="Big-Invisible">
+                        <h1 id="CennikInformator">Pobierz pełny cennik w formacie PDF</h1>
+                        <a href=""><img src="images/Home/pdf.png" /></a>
+                    </div>
+
+                </div>
+
+                <div id="sklep2">
+                    <h1>Jesteś zainteresowany zdjęciem do dowodu osobistego, paszportu bądź legitymacji?</h1>
+                    <h2>Koszt tego typu zdjęć to zaledwie 20 zł za 6 kopii wraz z retuszem!</h2>
+                    <h3>Odbiór po 15 minutach</h3>
+                </div>
+
+                <div id="sklep3">
+                    <div class="OpisCen1">
+                        <h3 class="Specyfic2">Druk</h3>
+                        <table class="tab2">
+                            <tr>
+                                <td></td>
+                                <td colspan="2"><b class="NaglowekB2">A4</b></td>
+                                <td colspan="2"><b class="NaglowekB2">A3</b></td>
+                            </tr>
+                            <tr class="NaglowekTabeli">
+                                <td><b class="NaglowekB">Ilość</b></td>
+                                <td><b class="NaglowekB">Czarnobiały</b></td>
+                                <td><b class="NaglowekB">Kolorowy</b></td>
+                                <td><b class="NaglowekB">Czarnobiały</b></td>
+                                <td><b class="NaglowekB">Kolorowy</b></td>
+                            </tr>
+                            <tr class="">
+                                <td class="CasualRowRightCol">1 - 10 szt.</td>
+                                <td>0,60</td>
+                                <td class="CasualRowRightCol">2,00</td>
+                                <td>1,00</td>
+                                <td>4,20</td>
+                            </tr>
+                            <tr class="">
+                                <td class="CasualRowRightCol">11 - 50 szt.</td>
+                                <td>0,50</td>
+                                <td class="CasualRowRightCol">1,80</td>
+                                <td>0,80</td>
+                                <td>3,80</td>
+                            </tr>
+                            <tr>
+                                <td class="CasualRowRightCol">51 - 100 szt.</td>
+                                <td>0,40</td>
+                                <td class="CasualRowRightCol">1,60</td>
+                                <td>0,50</td>
+                                <td>3,20</td>
+                            </tr>
+                            <tr class="">
+                                <td class="CasualRowRightCol">101+ szt.</td>
+                                <td>0,30</td>
+                                <td class="CasualRowRightCol">1,40</td>
+                                <td>0,40</td>
+                                <td>2,40</td>
+                            </tr>
+                        </table>
+                        <h3 class="Specyfic1">Ksero</h3>
+                        <table class="tab2">
+                            <tr>
+                                <td></td>
+                                <td colspan="2"><b class="NaglowekB2">A4</b></td>
+                                <td colspan="2"><b class="NaglowekB2">A3</b></td>
+                            </tr>
+                            <tr class="NaglowekTabeli">
+                                <td><b class="NaglowekB">Ilość</b></td>
+                                <td><b class="NaglowekB">Czarnobiały</b></td>
+                                <td><b class="NaglowekB">Kolorowy</b></td>
+                                <td><b class="NaglowekB">Czarnobiały</b></td>
+                                <td><b class="NaglowekB">Kolorowy</b></td>
+                            </tr>
+                            <tr>
+                                <td class="CasualRowRightCol">1 - 10 szt.</td>
+                                <td>0,40</td>
+                                <td class="CasualRowRightCol">2,00</td>
+                                <td>1,00</td>
+                                <td>4,20</td>
+                            </tr>
+                            <tr>
+                                <td class="CasualRowRightCol">11 - 50 szt.</td>
+                                <td>0,30</td>
+                                <td class="CasualRowRightCol">1,80</td>
+                                <td>0,80</td>
+                                <td>3,80</td>
+                            </tr>
+                            <tr>
+                                <td class="CasualRowRightCol">51 - 100 szt.</td>
+                                <td>0,25</td>
+                                <td class="CasualRowRightCol">1,60</td>
+                                <td>0,50</td>
+                                <td>3,20</td>
+                            </tr>
+                            <tr>
+                                <td class="CasualRowRightCol">101+ szt.</td>
+                                <td>0,20</td>
+                                <td class="CasualRowRightCol">1,40</td>
+                                <td>0,40</td>
+                                <td>2,40</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="sklep4">
+                    <div class="OpisCen1">
+                        <table class="tab2">
+                            <tr class="BoldBottomColapse">
+                                <td class="bold BoldBottomColapse">Kubek Biały</td>
+                                <td class="BoldBottomColapse">20 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Kubek z klorowym środkiem</td>
+                                <td>25 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Kubek magiczny</td>
+                                <td>32 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Kubek z kolorowym uchwytem</td>
+                                <td>25 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Koszulka z nadrukiem</td>
+                                <td>28 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Koszulka dziecięca</td>
+                                <td>26 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Koszulka szpic damska</td>
+                                <td>30 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Maskotki</td>
+                                <td>36 - 47 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Poszewka jednostronna</td>
+                                <td>17 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Poszewka dwustronna</td>
+                                <td>27 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Puzzle Pocztówka</td>
+                                <td>5 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Puzzle A4</td>
+                                <td>12 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Ślinak</td>
+                                <td>15 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Podkładka pod mysz</td>
+                                <td>10 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Podkładka pod kubek</td>
+                                <td>10 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Czapka</td>
+                                <td>22 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Brelok</td>
+                                <td>13 zł</td>
+                            </tr>
+                            <tr class="BoldBottomColapse">
+                                <td class="bold">Krawat</td>
+                                <td>26 zł</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="sklep5">
+                    <div class="OpisCen1">
+                        <h2>Kalendarze</h2>A4 (2 sztuki) + okładka 45zł <br> A3 (2 sztuki) + okładka 65zł
+
+                        <h2>Reprodukcje</h2>
+                        <h3>Reprodukcja i odnowa starych fotografi cena od 8zł, w zaleznosci od stopnia zniszczenia oryginału</h3>
+
+                        <table class="tab2" id="Sklep5Inne">
+                            <tr class="NaglowekTabeli">
+                                <td colspan="4"><b class="SklepInneB">Wydruki Wielkoformatowe</b></td>
+                            </tr>
+                            <tr class="CasualSklepInneTd">
+                                <td><b>40 x 50</b></td>
+                                <td class="CasualRowRightCol">35zł</td>
+                                <td><b>50 x 70</b></td>
+                                <td>60zł</td>
+                            </tr>
+                            <tr class="CasualSklepInneTd">
+                                <td><b>40 x 60</b></td>
+                                <td class="CasualRowRightCol">40zł</td>
+                                <td><b>60 x 80</b></td>
+                                <td>85zł</td>
+                            </tr>
+                            <tr class="CasualSklepInneTd">
+                                <td><b>50 x 60</b></td>
+                                <td class="CasualRowRightCol">50zł</td>
+                                <td><b>60 x 90</b></td>
+                                <td>90zł</td>
+                            </tr>
+                            <tr class="NaglowekTabeli">
+                                <td colspan="4"><b class="SklepInneB"><b>Zdjecia na płotnie</b></td>
+                            </tr>
+                            <tr class="CasualSklepInneTd">
+                                <td><b>30 x 40</b></td>
+                                <td class="CasualRowRightCol">70zł</td>
+                                <td><b>50 x 60</b></td>
+                                <td>130zł</td>
+                            </tr>
+                            <tr class="CasualSklepInneTd">
+                                <td><b>40 x 50</b></td>
+                                <td class="CasualRowRightCol">90zł</td>
+                                <td><b>50 x 70</b></td>
+                                <td>150zł</td>
+                            </tr>
+                            <tr class="CasualSklepInneTd">
+                                <td><b>40 x 60</b></td>
+                                <td class="CasualRowRightCol" 110zł</td>
+                                <td><b>50 x 80</b></td>
+                                <td>170zł</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <button class="GalleryChoiceBtn1" id="sklep1btn" onclick="Show5()">Odbitki cyfrowe</button>
+            <button class="GalleryChoiceBtn1" id="sklep2btn" onclick="Show6()">Zdjecia do dokumentów</button>
+            <button class="GalleryChoiceBtn1" id="sklep3btn" onclick="Show7()">Druk/Ksero</button>
+            <button class="GalleryChoiceBtn1" id="sklep4btn" onclick="Show8()">Fotogadżety</button>
+            <button class="GalleryChoiceBtn1" id="sklep5btn" onclick="Show9()">Inne</button>
+        </div>
+    </div>
+    <!--Kontakt-->
+    <div id="Segment6" class="PodstawowySegment">
+        <div class="SegmentTittle" style="background-image: url(images/Home/textback5.jpeg);">
+            <div class="AttachmentText" style="background-image: url(images/Home/k.png);"></div>
+        </div>
+        <div id="Viewer5">
+            <div id="info">
+                <h1>Laboratorium i Studio Fotograficzne</h1>
+                <h2>"Foto u Pawła"</h2>
+                <h3>Paweł Lehmann</h3>
+                <h4>83-307 Kiełpino ul. ks. Arasmusa 2B</h4>
+                <h5>NIP: 5891800927</h5>
+                <div id="mapkaMini" class="Big-Invisible">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d582.198876308134!2d18.2249437!3d54.2898828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae57365eca056164!2sLaboratorium+i+Studio+Fotograficzne+%22Foto+u+Paw%C5%82a%22+Pawe%C5%82+Lehmann!5e0!3m2!1spl!2spl!4v1505596139815"
+                            width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="mapkaMini" class="Mini-invisible">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d582.198876308134!2d18.2249437!3d54.2898828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae57365eca056164!2sLaboratorium+i+Studio+Fotograficzne+%22Foto+u+Paw%C5%82a%22+Pawe%C5%82+Lehmann!5e0!3m2!1spl!2spl!4v1505596139815"
+                        width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div id="mapkaMedium" class="Mini-invisible">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d582.198876308134!2d18.2249437!3d54.2898828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae57365eca056164!2sLaboratorium+i+Studio+Fotograficzne+%22Foto+u+Paw%C5%82a%22+Pawe%C5%82+Lehmann!5e0!3m2!1spl!2spl!4v1505596139815"
+                        width="600" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div id="mapkaLarge" class="Mini-invisible">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d582.198876308134!2d18.2249437!3d54.2898828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae57365eca056164!2sLaboratorium+i+Studio+Fotograficzne+%22Foto+u+Paw%C5%82a%22+Pawe%C5%82+Lehmann!5e0!3m2!1spl!2spl!4v1505596139815"
+                        width="800" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!--Stopka-->
+    <div id="Stopka" class="Mini-invisible">
         <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
+            <li id="StopkaLi0"><b>Codli</b><br />Projektowanie nowoczesnych aplikacji</li>
+            <li id="StopkaLi1"><b>Adres e-mail</b><br />kontakt@codli.eu</li>
+            <li id="StopkaLi2"><b>Codli</b><br />Projektowanie nowoczesnych aplikacji</li>
+            <li id="StopkaLi3"><b>Telefon</b><br />+48 883-761-687</li>
         </ul>
     </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
+
+    <div id="MiniStopka" class="Big-Invisible">
+        <h1>Realizacja aplikacji</h1>
+        <h2>Codli</h2>
+        <h3>www.codli.eu</h3>
+        <img src="images/Home/minicodli.png" alt="Logo Codli" />
+        <h4>Jesteś zainteresowany stroną bądź aplikacją internetową?</h4>
+        <h5>Nie czekaj, skontaktuj się z nami!</h5>
     </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
-</div>
+    <!--Tutaj znajdują się wszystkie pozostałe elementy (włącznie ze stopką)-->
+</body>
+
+</html>

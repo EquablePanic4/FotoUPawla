@@ -1,0 +1,171 @@
+﻿@model FotoUPawla20.Models.AdminViewModel
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Panel administratora</title>
+    <link href="~/css/Admin/admin.css" rel="stylesheet" />
+    <link rel="Shortcut icon" href="~/images/fup.ico">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="~/js/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/js/Admin.js"></script>
+</head>
+
+<body>
+    <h1 id="AdminHeader">Panel administratora</h1>
+    <h1 id="AdminFooter">Codli.NET AdminPanel [v1.00]</h1>
+
+    <div id="LinkReply">
+    </div>
+
+    <!--SEKCJE-->
+    <div class="AdminSection">
+        <div class="Title">Dodaj klienta</div>
+        <div class="Container">
+            <form asp-controller="Admin" asp-action="AddNewClient" data-ajax="true" data-ajax-method="POST" data-ajax-loading="#LoadingDIV1" data-ajax-update="#LinkReply1" name="AddClientForm" id="AddClientForm">
+                <input type="text" placeholder="Imię Nazwisko (firma)" name="ClientName" />
+                <input type="text" placeholder="Data wykonania zdjęć (DD-MM-RRRR)" name="PhotosDate" />
+                <input type="text" placeholder="Tytuł (niewidoczny dla klienta)" name="TaskTitle" />
+                <input type="text" placeholder="Adres e-mail (opcjonalnie)" name="ClientEmail" />
+                <input type="text" placeholder="Numer telefonu" name="ClientPhone" />
+
+                <input type="submit" name="SubmitKlientForm" id="SubmitKlientBtn" value="Zatwierdź" />
+            </form>
+
+            <div id="LoadingDIV1" style="display: none;">
+                <h3>Trwa ładowanie, proszę czekać...</h3>
+            </div>
+
+            <div id="LinkReply1">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="AdminSection">
+        <div class="Title">Oczekujący klienci</div>
+        <div class="Container">
+            <table>
+                <tr class="TableHeader">
+                    <td>Klient</td>
+                    <td class="TabelkaOpisInside">Tytuł</td>
+                    <td>Data wykonania zdjęć</td>
+                    <td>Telefon</td>
+                </tr>
+            @Html.Raw(Model.OczekujacyKlienci)
+        </div>
+    </div>
+
+    <div class="AdminSection">
+        <div class="Title">Zrealizowani klienci</div>
+        <div class="Container">
+            <table>
+                <tr class="TableHeader">
+                    <td>Klient</td>
+                    <td class="TabelkaOpisInside">Tytuł</td>
+                    <td>Data wykonania zdjęć</td>
+                    <td>Telefon</td>
+                    <td>Klucz</td>
+                    <td>Wyślij ponownie e-mail</td>
+                </tr>
+            @Html.Raw(Model.ZrealizowaniKlienci)
+        </div>
+    </div>
+
+    <div class="AdminSection">
+        <div class="Title">Dodaj zdjęcia</div>
+        <div class="Container">
+
+            <h3>Galeria główna</h3>
+            <input type="text" placeholder="Adres bezpośredni" name="MainGalleryPhotoUrl" id="AddPhotoToGalleryTextMain" />
+            <input type="button" name="SubmitMainGalleryPhoto" value="Zatwierdź" onclick="AjaxAddPhoto('AddPhotoToGalleryTextMain', 1)" />
+
+            <h3>Galeria Przygotowania</h3>
+            <input type="text" placeholder="Adres bezpośredni" name="MainGalleryPhotoUrl" id="AddPhotoToGalleryTextPrzygotowania" />
+            <input type="button" name="SubmitMainGalleryPhoto" value="Zatwierdź" onclick="AjaxAddPhoto('AddPhotoToGalleryTextPrzygotowania', 2)" />
+
+            <h3>Galeria Ceremonia</h3>
+            <input type="text" placeholder="Adres bezpośredni" name="MainGalleryPhotoUrl" id="AddPhotoToGalleryTextCeremonia" />
+            <input type="button" name="SubmitMainGalleryPhoto" value="Zatwierdź" onclick="AjaxAddPhoto('AddPhotoToGalleryTextCeremonia', 3)" />
+
+            <h3>Galeria Wesele</h3>
+            <input type="text" placeholder="Adres bezpośredni" name="MainGalleryPhotoUrl" id="AddPhotoToGalleryTextWesele" />
+            <input type="button" name="SubmitMainGalleryPhoto" value="Zatwierdź" onclick="AjaxAddPhoto('AddPhotoToGalleryTextWesele', 4)" />
+
+            <h3>Galeria Plener</h3>
+            <input type="text" placeholder="Adres bezpośredni" name="MainGalleryPhotoUrl" id="AddPhotoToGalleryTextPlener" />
+            <input type="button" name="SubmitMainGalleryPhoto" value="Zatwierdź" onclick="AjaxAddPhoto('AddPhotoToGalleryTextPlener', 5)" />
+
+        </div>
+    </div>
+
+    <div class="AdminSection">
+        <div class="Title">Usuń zdjęcia</div>
+        <div class="Container">
+            <h3>Galeria główna</h3>
+            <table>
+                <tr class="TableHeader">
+                    <td>Miniaturka</td>
+                    <td>Usuwanie</td>
+                </tr>
+
+                @foreach (var e in Model.MainGalleryDeleteArray)
+                    {@Html.Raw(e)}
+            </table>
+
+            <h3>Galeria przygotowaniowa</h3>
+            <table>
+                <tr class="TableHeader">
+                    <td>Miniaturka</td>
+                    <td>Usuwanie</td>
+                </tr>
+                @foreach (var e in Model.PrzygotowaniaGalleryDeleteArray)
+                    {@Html.Raw(e)}
+            </table>
+
+            <h3>Galeria ceremonialna</h3>
+            <table>
+                <tr class="TableHeader">
+                    <td>Miniaturka</td>
+                    <td>Usuwanie</td>
+                </tr>
+                @foreach (var e in Model.CeremoniaGalleryDeleteArray)
+                    {@Html.Raw(e)}
+            </table>
+
+            <h3>Galeria weselna</h3>
+            <table>
+                <tr class="TableHeader">
+                    <td>Miniaturka</td>
+                    <td>Usuwanie</td>
+                </tr>
+                @foreach (var e in Model.WeseleGalleryDeleteArray)
+                    {@Html.Raw(e)}
+            </table>
+
+            <h3>Galeria plenerowa</h3>
+            <table>
+                <tr class="TableHeader">
+                    <td>Miniaturka</td>
+                    <td>Usuwanie</td>
+                </tr>
+                @foreach (var e in Model.PlenerGalleryDeleteArray)
+                    {@Html.Raw(e)}
+            </table>
+
+        </div>
+    </div>
+
+    <div id="WidgetsFooterSeparator"></div>
+    <div id="Skrypty">
+
+    </div>
+</body>
+</html>

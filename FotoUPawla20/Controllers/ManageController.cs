@@ -495,7 +495,7 @@ namespace FotoUPawla20.Controllers
         {
             return string.Format(
                 AuthenicatorUriFormat,
-                _urlEncoder.Encode("FotoUPawla20"),
+                _urlEncoder.Encode("Portal"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }

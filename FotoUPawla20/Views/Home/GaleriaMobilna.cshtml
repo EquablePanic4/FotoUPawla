@@ -1,0 +1,42 @@
+﻿@model FotoUPawla20.Models.MobileFotoModel
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Foto u Pawła</title>
+    <link rel="Shortcut icon" href="~/images/fup.ico">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="~/js/skrypty.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+
+    <style>
+        body{
+            width: 100%;
+        }
+
+        html {
+            width: 100%;
+        }
+
+        .MobilePhoto {
+            padding: 30px;
+            width: 90vw;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+    <body>
+        @Html.Raw(Model.GenerujWidok())
+    </body>
+</html>

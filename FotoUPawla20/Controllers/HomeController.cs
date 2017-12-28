@@ -5,33 +5,132 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FotoUPawla20.Models;
+using FotoUPawla20.Models.Database;
 
 namespace FotoUPawla20.Controllers
 {
     public class HomeController : Controller
     {
+
+        private CustomModelsContext db;
+
+        public HomeController(CustomModelsContext context)
+        {
+            db = context;
+        }
+
+        /*
+         Dane logowania do Imgur:
+            Login: fotoupawla (kontakt@codli.eu)
+            Hasło: fotoupawla1
+            Client ID: ca75ca4c292e7dd
+            Client secret: 1e5f620e88600b9c9f31a0c2c4fd1d4b861652b4
+
+            NIESTETY, DO UŻYTKU NIEKOMERCYJNEGO
+         */
+
         public IActionResult Index()
         {
-            return View();
+            //URL Przerwy technicznej
+            string PrzerwaIMG = "https://i.imgur.com/FiG0ZHG.jpg";
+
+            //Generowanie obrazka startowego
+            Random losowyObrazek = new Random();
+            int numerObrazka = losowyObrazek.Next(0, 6);
+
+            var Model = new HomeViewModel();
+
+            Model.ObrazekStartowy = "images/Home/start" + numerObrazka.ToString() + ".jpeg";
+
+            //Generowanie skryptu obsługi galerii
+            var ListaGalerii = (from a in db.Zdjecia select a).ToList<ZdjeciaModel>();
+
+            /*
+                 ---IDENTYFIKATORY POSZCZEGÓLNYCH GALERII---
+                 
+                 1- Pierwsza galeria (ogólna)
+                 2- Galeria ze zdjęciami z przygotowań
+                 3- Galeria ze zdjęciami z ceremoni
+                 4- Galeria ze zdjęciami z imprezy weselnej
+                 5- Galeria ze zdjęciami plenerowymi
+             
+             */
+
+            Model.Galeria1 = SilnikGaleriowy(ListaGalerii, 1);
+            Model.GaleriaPrzygotowania = SilnikGaleriowy(ListaGalerii, 2);
+            Model.GaleriaCeremonia = SilnikGaleriowy(ListaGalerii, 3);
+            Model.GaleriaWesele = SilnikGaleriowy(ListaGalerii, 4);
+            Model.GaleriaPlener = SilnikGaleriowy(ListaGalerii, 5);
+
+            return View(Model);
         }
 
-        public IActionResult About()
+        public IActionResult GaleriaMobilna(string Galeria)
         {
-            ViewData["Message"] = "Your application description page.";
+            int Nawigator = 0;
 
-            return View();
+            switch (Galeria)
+            {
+                case "Przygotowania":
+                    Nawigator = 2;
+                    break;
+
+                case "Ceremonia":
+                    Nawigator = 3;
+                    break;
+
+                case "Wesele":
+                    Nawigator = 4;
+                    break;
+
+                case "Plener":
+                    Nawigator = 5;
+                    break;
+
+                default:
+                    Nawigator = 2;
+                    break;
+            }
+
+            var Model = new MobileFotoModel();
+            Model.TablicaURL = TablicaZdjecMobilnych(Nawigator);
+
+            return View(Model);
         }
 
-        public IActionResult Contact()
+        private string[] SilnikGaleriowy(List<ZdjeciaModel> WszystkieZdjecia, int GaleriaID)
         {
-            ViewData["Message"] = "Your contact page.";
+            var CacheList = (from Mourinho in WszystkieZdjecia where Mourinho.GaleriaId == GaleriaID select Mourinho.Path);
+            string PrzerwaIMG = "https://i.imgur.com/FiG0ZHG.jpg";
+            string[] tablica;
+            int Counter = CacheList.Count();
 
-            return View();
+            if (Counter != 0)
+            {
+                tablica = new string[Counter];
+                int Conte = 0;
+
+                foreach (var i in CacheList)
+                {
+                    tablica[Conte] = i;
+                    Conte++;
+                }
+            }
+
+            else
+            {
+                tablica = new string[1];
+                tablica[0] = PrzerwaIMG;
+            }
+
+            return tablica;
         }
 
-        public IActionResult Error()
+        private string[] TablicaZdjecMobilnych(int GaleriaID)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            string[] array = (from a in db.Zdjecia where a.GaleriaId == GaleriaID select a.Path).ToArray();
+
+            return array;
         }
     }
 }
