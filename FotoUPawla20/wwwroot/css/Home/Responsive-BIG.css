@@ -9,48 +9,48 @@
         top: 0;
     }
 
-	#Nawigator {
-		list-style-type: none;
-		display: inline-block;
-		width: 100%;
-		text-align: center;
-		margin: 0 auto;
-		padding: 0;
-		background-color: #FFFFFF;
-		color: #212121;
-		font-size: 22px;
-		height: 100px;
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 100;
-		box-shadow: 0px 0px 50px black;
-	}
-	
-	#Nawigator > li {
-		display: inline-block;
-		width: 10.5%;
-		word-wrap: break-word;
-		vertical-align: middle;
-        margin: 0;
-	}
-	
-	#Nawigator > li:hover {
-		font-weight: 600;
-		cursor: pointer;
-	}
-	
-	#StrefaKlientaLi {
-		background-color: #3F51B5;
-		height: 100%;
-		vertical-align: middle;
-		font-weight: 400;
-		color: #E8EAF6;
-		text-overflow: ellipsis;
-		word-wrap: break-word;
-		overflow: hidden;
-		line-height: 100px;
-	}
+    #Nawigator {
+        list-style-type: none;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        background-color: #FFFFFF;
+        color: #212121;
+        font-size: 22px;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        box-shadow: 0px 0px 50px black;
+    }
+
+        #Nawigator > li {
+            display: inline-block;
+            width: 10.5%;
+            word-wrap: break-word;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+            #Nawigator > li:hover {
+                font-weight: 600;
+                cursor: pointer;
+            }
+
+    #StrefaKlientaLi {
+        background-color: #3F51B5;
+        height: 100%;
+        vertical-align: middle;
+        font-weight: 400;
+        color: #E8EAF6;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow: hidden;
+        line-height: 100px;
+    }
 
     .NaviCenter > div {
         width: 100%;
@@ -60,90 +60,94 @@
         background-position: center;
         background-repeat: no-repeat;
     }
-	
-	#Start {
-		position: absolute;
-		top: 100px;
-		left: 0px;
-		width: 100%;
-		height: calc(100vh - 100px);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		box-shadow: 0px 0px 40px black;
-		z-index: 10;
-	}
 
-	.QuoteBox {
-		left: 0;
-		width: 100%;
-		position: absolute;
-		top: 20%;
-		color: #F5F5F5;
-		text-shadow: 0px 0px 20px #212121;
-		box-shadow: inset 10px 10px 10000px rgba(33, 33, 33, 0.2);
-		display: none;
-	}
+    #Start {
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0px 0px 40px black;
+        z-index: 10;
+    }
 
-	.QuoteBox > h1 {
-		font-weight: 400;
-	}
+    .QuoteBox {
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        color: #F5F5F5;
+        text-shadow: 0px 0px 20px #212121;
+        box-shadow: inset 10px 10px 10000px rgba(33, 33, 33, 0.2);
+        display: none;
+    }
 
-	.QuoteBox > h2 {
-		font-weight: 300;
-	}
+        .QuoteBox > h1 {
+            font-weight: 400;
+        }
 
-	#Kontener {
-		position: absolute;
-		top: 100%;
-		width: 100%;
-		display: none;
-	}
-	
-	#Segment1 {
-		position: absolute;
-		height: calc(100vh + 700px);
-		width: 100%;
-		top: 100vh;
-		background-color: #212121;
-	}
-	
-	#Segment2 {
-		position: absolute;
-		height: calc(100vh + 800px - 100px);
-		width: 100%;
-		top: calc(200vh + 800px - 100px);
-		background-color: #F0F0F0;
-	}
-	
-	#Segment3 {
-		position: absolute;
-		height: calc(100vh + 800px - 100px);
-		width: 100%;
-		top: calc(300vh + 2 * 800px - 2 * 100px);
-		background-color: #F0F0F0;
-	}
-	#Segment4 {
-		position: absolute;
-		height: calc(100vh + 800px - 100px);
-		width: 100%;
-		top: calc(400vh + 3 * 800px - 3 * 100px);
-		background-color: #F0F0F0;
-	}
-	#Segment5 {
-		position: absolute;
-		height: calc(100vh + 800px - 100px);
-		width: 100%;
-		top: calc(500vh + 4 * 800px - 4 * 100px);
-		background-color: #F0F0F0;
-	}
-	#Segment6 {
-		position: absolute;
-		height: calc(100vh + 330px);
-		width: 100%;
-		top: calc(600vh + (5 * 800px - (5 * 100px)));
-		background-color: #F0F0F0;
-	}
+        .QuoteBox > h2 {
+            font-weight: 300;
+        }
+
+    #Kontener {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        display: none;
+    }
+
+    #Segment1 {
+        position: absolute;
+        height: calc(100vh + 700px);
+        width: 100%;
+        top: 100vh;
+        background-color: #212121;
+    }
+
+    #Segment2 {
+        position: absolute;
+        height: calc(100vh + 800px - 100px);
+        width: 100%;
+        top: calc(200vh + 800px - 100px);
+        background-color: #F0F0F0;
+    }
+
+    #Segment3 {
+        position: absolute;
+        height: calc(100vh + 800px - 100px);
+        width: 100%;
+        top: calc(300vh + 2 * 800px - 2 * 100px);
+        background-color: #F0F0F0;
+    }
+
+    #Segment4 {
+        position: absolute;
+        height: calc(100vh + 800px - 100px);
+        width: 100%;
+        top: calc(400vh + 3 * 800px - 3 * 100px);
+        background-color: #F0F0F0;
+    }
+
+    #Segment5 {
+        position: absolute;
+        height: calc(100vh + 800px - 100px);
+        width: 100%;
+        top: calc(500vh + 4 * 800px - 4 * 100px);
+        background-color: #F0F0F0;
+    }
+
+    #Segment6 {
+        position: absolute;
+        height: calc(100vh + 330px);
+        width: 100%;
+        top: calc(600vh + (5 * 800px - (5 * 100px)));
+        background-color: #F0F0F0;
+    }
+
     #Stopka {
         top: calc(700vh + 6 * 800px - 6 * 100px - 90px);
         position: relative;
@@ -156,14 +160,14 @@
         box-shadow: 0px 0px 30px black;
     }
 
-    #Stopka > ul {
+        #Stopka > ul {
             list-style-type: none;
             position: relative;
-    }
+        }
 
-    #Stopka > ul > li {
-            position: absolute;
-    }
+            #Stopka > ul > li {
+                position: absolute;
+            }
 
     #StopkaLi0 {
         display: none;
@@ -203,32 +207,32 @@
         background-attachment: fixed;
         z-index: -1;
     }
-	
-	.AttachmentText {
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 800px;
-		background-attachment: fixed;
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	
-	.SHViewer {
-		height: 100%;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-color: #212121;
-		position: relative;
-	}
-	
-	#Viewer1 {
-		z-index: 10;
-		height: calc(100vh - 100px);
-	}
+
+    .AttachmentText {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 800px;
+        background-attachment: fixed;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .SHViewer {
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: #212121;
+        position: relative;
+    }
+
+    #Viewer1 {
+        z-index: 10;
+        height: calc(100vh - 100px);
+    }
 
     #Viewer2 {
         float: right;
@@ -236,6 +240,7 @@
         height: calc(100vh - 100px);
         width: 80%;
     }
+
     #Viewer3 {
         height: calc(100vh - 100px);
         background-position: center;
@@ -263,127 +268,124 @@
         height: calc(100vh - 170px);
         background-color: #F0F0F0;
     }
-	
-	.SHViewer > button {
-		transition: 400ms;
-		height: 100px;
-		width: 100px;
-		border-radius: 50%;
-		border: 1px solid #FFFFFF;
-		background-color: transparent;
-		color: white;
-		font-size: 70px;
-		font-weight: 300;
-		box-shadow: 0px 0px 30px black;
-		position: absolute;
-		top: 50%;
-		cursor: pointer;
-		
-	}
-	
-	.LeftBtn {
-		left: 60px;
-	}
-	
-	.RightBtn {
-		right: 60px;
-	}
-	
-	.GaleryBtn {
-		
-	}
-	
-	.SHViewer > button:hover {
-		animation-timing-function: ease-in;
-		transition: 400ms;
-		background-color: white;
-		color: black;
-		border: 2px solid black;
-	}
-	
-	.SHViewer > button:focus {
-		outline: 0;
-	}
-	
-	.GalleryChoiceBtn {
-		position: relative;
-		transition: 400ms;
-		width: 20%;
-		z-index: 11;
-		margin: 0;
-		padding: 0;
-		height: calc( calc(100vh - 100px) / 4);
-		border: 1px solid #3F51B5;
-		background-color: #3F51B5;
-		color: white;
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 300;
-		font-size: 30px;
-		cursor: pointer;
-	}
 
-	.ShadowDIV {
-		width: 100%;
-		margin: 0;
-		padding: 0;
-		height: calc(100% - 800px);
-		box-shadow: 0px 0px 30px black;
-		z-index: 10;
-		position: relative;
-		vertical-align: middle;
-	}
+    .SHViewer > button {
+        transition: 400ms;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 1px solid #FFFFFF;
+        background-color: transparent;
+        color: white;
+        font-size: 70px;
+        font-weight: 300;
+        box-shadow: 0px 0px 30px black;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+    }
 
-	.ShadowDIVMini {
-		width: 100%;
-		margin: 0;
-		padding: 0;
-		height: calc(100vh - 100px);
-		box-shadow: 0px 0px 30px black;
-		z-index: 10;
-		position: relative;
-		vertical-align: middle;
-	}
+    .LeftBtn {
+        left: 60px;
+    }
 
-	#Wypelniacz10pro {
-		height: 10%;
-		width: 100%;
-	}
-	
-	.GalleryChoiceBtn:hover {
-		background-color: #2962FF !important;
-		font-weight: 400 !important;
-		transition: 400ms !important;
-	}
-	
-	.GalleryChoiceBtn:focus {
-		outline: 0;
-	}
-	.GalleryChoiceBtn1 {
-		transition: 400ms;
-		width: 20%;
-		margin: 0;
-		padding: 0;
-		height: calc(calc(100vh - 100px) / 5);
-		border: 1px solid #3F51B5;
-		background-color: #3F51B5;
-		color: white;
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 300;
-		font-size: 30px;
-		cursor: pointer;
+    .RightBtn {
+        right: 60px;
+    }
 
-		
-	}
-	
-	.GalleryChoiceBtn1:hover {
-		background-color: #2962FF !important;
-		font-weight: 400 !important;
-		transition: 400ms !important;
-	}
-	
-	.GalleryChoiceBtn1:focus {
-		outline: 0;
-	}
+    .GaleryBtn {
+    }
+
+    .SHViewer > button:hover {
+        animation-timing-function: ease-in;
+        transition: 400ms;
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+    }
+
+    .SHViewer > button:focus {
+        outline: 0;
+    }
+
+    .GalleryChoiceBtn {
+        position: relative;
+        transition: 400ms;
+        width: 20%;
+        z-index: 11;
+        margin: 0;
+        padding: 0;
+        height: calc( calc(100vh - 100px) / 4);
+        border: 1px solid #3F51B5;
+        background-color: #3F51B5;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .ShadowDIV {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: calc(100% - 800px);
+        box-shadow: 0px 0px 30px black;
+        z-index: 10;
+        position: relative;
+        vertical-align: middle;
+    }
+
+    .ShadowDIVMini {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: calc(100vh - 100px);
+        box-shadow: 0px 0px 30px black;
+        z-index: 10;
+        position: relative;
+        vertical-align: middle;
+    }
+
+    #Wypelniacz10pro {
+        height: 10%;
+        width: 100%;
+    }
+
+    .GalleryChoiceBtn:hover {
+        background-color: #2962FF !important;
+        font-weight: 400 !important;
+        transition: 400ms !important;
+    }
+
+    .GalleryChoiceBtn:focus {
+        outline: 0;
+    }
+
+    .GalleryChoiceBtn1 {
+        transition: 400ms;
+        width: 20%;
+        margin: 0;
+        padding: 0;
+        height: calc(calc(100vh - 100px) / 5);
+        border: 1px solid #3F51B5;
+        background-color: #3F51B5;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+        .GalleryChoiceBtn1:hover {
+            background-color: #2962FF !important;
+            font-weight: 400 !important;
+            transition: 400ms !important;
+        }
+
+        .GalleryChoiceBtn1:focus {
+            outline: 0;
+        }
 
     #OfertaBox {
         width: 100%;
@@ -400,402 +402,445 @@
         background-position: center;
     }
 
-	#OfertaBoxMini {
-		display: none;
-	}
-
-	#ShadowDIV > h3 {
-		width: 100%;
-		margin: 0 auto;
-		padding: 0;
-		text-align: center;
-		height: 10%;
-		font-size: 100%;
-		min-height: 1000px;
-	}
-	
-	.NormalCol {
-		height: 50%;
-		width: 25%;
-		background-color: #FFFDE7;
-		display: inline-block;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 20px;
-		box-shadow: 0px 0px 80px black;
-		z-index: 1;
-		max-width: 400px;
-		position: relative;
-	}
-
-	.NormalCol > .KontenerKolumnyOferty > ul {
-		padding: 0;
-		margin: 0;
-		list-style-type: none;
-	}
-
-	.NormalCol > ul > li {
-		padding: 0;
-		margin: 0;
-	}
-	
-	.SuperCol {
-		height: 70vh;
-		width: 40%;
-		background-color: #E8EAF6;
-		display: inline-block;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 23px;
-		box-shadow: 0px 0px 80px black;
-		z-index: 10;
-		position: relative;
-		max-width: 600px;
-	}
-
-	.SuperCol > .KontenerKolumnyOferty > ul {
-		padding: 0;
-		margin: 0;
-		list-style-type: none;
-	}
-
-	.SuperCol > ul > li {
-		padding: 0;
-		margin: 0;
-	}
-
-	/*STYLOWANIE <li></li> BOXÓW Z OFERTĄ*/
-	/*ZWYKŁE*/
-	.PakietTit {
-		font-size: 30px;
-		padding-bottom: 10px;
-		padding-top: 10px;
-		background-color: #FFC800;
-		box-shadow: 0px 1px 2px black;
-	}
-
-	.Point {
-		border-bottom: 2px solid #FFC800;
-		padding-bottom: 5px;
-		padding-top: 15px;
-		font-weight: 300;
-	}
-
-	.Price {
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		font-weight: 600;
-		font-size: 25px;
-	}
-
-	/*SUPER*/
-	.PakietTitS {
-		font-size: 40px;
-		padding-bottom: 10px;
-		padding-top: 10px;
-		background-color: #3F51B5;
-		box-shadow: 0px 1px 2px black;
-		color: #E8EAF6;
-	}
-
-	.PointS {
-		border-bottom: 1px solid #1A237E;
-		padding-top: calc(100% / 30);
-		padding-bottom: calc(100% / 30);
-	}
-
-	.NotPairPointS {
-		background-color: #C5CAE9;
-	}
-
-	.PodPointS {
-		font-size: 19px;
-		font-weight: 300;
-		display: inline-block;
-	}
-
-	.PriceS {
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		font-weight: 600;
-		font-size: 40px;
-	}
-
-	.PriceS > b {
-		font-weight: 300;
-		font-size: 20px;
-		display: block;
-	}
-
-	/* KONIEC! STYLOWANIE <li></li> BOXÓW Z OFERTĄ KONIEC!*/
-	.PodstawowySegment {
-	}
-
-	.KontenerKolumnyOferty {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-	}
-
-	.cennik	{
-		position: relative;
-		top: 0px;
-		height: calc(100% - 800px);
-		width: 100%;
-	}
-
-	.TrMargin {
-		padding-top: 30px;
-	}
-
-	.OpisCen1 {
-		position: absolute;
-		top: 50%;
-		left: 0;
-		width: 100%;
-		height: auto;
-		transform: translateY(-50%);
-	}
-
-	.OpisCen1 > .Specyfic1 {
-		padding-top: 50px;
-		font-size: 30px;
-	}
-
-	.OpisCen1 > .Specyfic2 {
-		margin: 0;
-		padding: 0;
-		font-size: 30px;
-	}
-
-	.SklepInneB {
-		display: block;
-		padding-top: 40px;
-		padding-bottom: 20px;
-		font-size: 30px;
-	}
-
-	#sklep5 > .OpisCen1 > h3 {
-		font-weight: 400;
-	}
-
-	#s1	{
-		position: relative;
-		background-repeat: no-repeat;
-		top: 0px;
-		height: calc(100% - 800px);
-		width: 100%;
-	}
-
-	#s1btn {
-		background-color: #2962FF;
-		font-weight: 400;
-	}
-
-	#s2	{
-		background-repeat: no-repeat;
-		position: relative;
-		top: 0px;
-		height: calc(100% - 800px);
-		width: 100%;
-		
-	}
-
-	#s3	{
-		background-repeat: no-repeat;
-		position: relative;
-		top: 0px;
-		height: calc(100% - 800px);
-		width: 100%;
-	}
-
-	#s4	{
-		background-repeat: no-repeat;
-		position: relative;
-		top: 0px;
-		height: calc(100% - 800px);
-		width: 100%;
-	}
-
-	.NaglowekTabeli {
-		border-bottom: 4px solid #3F51B5;
-	}
-
-	#sklep1	{
-		position: absolute;
-		background-repeat: no-repeat;
-		height: 100%;
-		width: 100%;
-		vertical-align: middle;
-	}
-
-	#sklep2	{
-		position: absolute;
-		top: 0;
-		left: 5%;
-		vertical-align: middle;
-		top: 50%;
-		width: 90%;
-		transform: translateY(-50%);
-		display: none;
-	}
-
-	#sklep3	{
-		background-repeat: no-repeat;
-		position: relative;
-		top: 0px;
-		height: 100%;
-		width: 100%;
-		vertical-align: middle;
-		display: none;
-	}
-
-	#sklep4	{
-		background-repeat: no-repeat;
-		position: relative;
-		top: 0px;
-		height: 100%;
-		width: 100%;
-		vertical-align: middle;
-		display: none;
-	}
-
-	#sklep4 > .OpisCen1 > .tab2 {
-		width: 80%;
-		text-align: left;
-	}
-
-	#sklep5 {
-		vertical-align: middle;
-		height: 100%;
-		display: none;
-	}
-
-	#sklep1btn {
-		background-color: #2962FF;
-		font-weight: 400;
-	}
-
-	#info {
-        position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		font-family: 'Open Sans', sans-serif;
-		margin: 0 auto;
-		width: 40%;
+    #OfertaBoxMini {
+        display: none;
     }
 
-	.OpisCen {
-		top: 10px;
-		width: 100%;
-		text-align: center;
-		text-decoration-line: underline;
-		margin: 5 auto;
-		padding: 0;
-		font-size: 40px;
-		height: 10%;
-		position: relative;
-	}
+    #ShadowDIV > h3 {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        height: 10%;
+        font-size: 100%;
+        min-height: 1000px;
+    }
 
-	.NaglowekB {
-		font-size: 19px;
-	}
+    .NormalCol {
+        height: 50%;
+        width: 25%;
+        background-color: #FFFDE7;
+        display: inline-block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        box-shadow: 0px 0px 80px black;
+        z-index: 1;
+        max-width: 400px;
+        position: relative;
+    }
 
-	.NaglowekB2 {
-		font-size: 24px;
-	}
+        .NormalCol > .KontenerKolumnyOferty > ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
 
-	.CasualRowRightCol {
-		border-right: 4px solid #3F51B5; 
-	}
+        .NormalCol > ul > li {
+            padding: 0;
+            margin: 0;
+        }
 
-	.CasualBottomColapse {
-		border-bottom: 1px solid #3F51B5;
-	}
+    .SuperCol {
+        height: 70vh;
+        width: 40%;
+        background-color: #E8EAF6;
+        display: inline-block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 23px;
+        box-shadow: 0px 0px 80px black;
+        z-index: 10;
+        position: relative;
+        max-width: 600px;
+    }
 
-	.BoldBottomColapse {
-		border-bottom: 2px solid #3F51B5;
-		margin-bottom: 5px;
-		height: 45px;
-	}
+        .SuperCol > .KontenerKolumnyOferty > ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
 
-	.CasualSklepInneTd {
-		height: 50px;
-	}
+        .SuperCol > ul > li {
+            padding: 0;
+            margin: 0;
+        }
 
-	#Sklep5Inne {
-		position: relative;
-		margin: 0 auto;
-	}
+    /*STYLOWANIE <li></li> BOXÓW Z OFERTĄ*/
+    /*ZWYKŁE*/
+    .PakietTit {
+        font-size: 30px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background-color: #FFC800;
+        box-shadow: 0px 1px 2px black;
+    }
 
-	.txt{
-		font-size: 35px;
-	}
+    .Point {
+        border-bottom: 2px solid #FFC800;
+        padding-bottom: 5px;
+        padding-top: 15px;
+        font-weight: 300;
+    }
 
-	.tab1 {
-		position: absolute;
-		width: 90%;
-		left: 5%;
-		top: calc(15%);
-		height: 70%;
-		text-align: left;
-		font-size: 25px;
-		border-spacing: inherit;
-		border-collapse: collapse;
-		text-align: center;
-	}
+    .Price {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 600;
+        font-size: 25px;
+    }
 
-	.tab2 {
-		width: 95%;
-		text-align: center;
-		font-size: 25px;
-		border-collapse: collapse;
-		position: relative;
-		margin: 0 auto;
-	}
+    /*SUPER*/
+    .PakietTitS {
+        font-size: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background-color: #3F51B5;
+        box-shadow: 0px 1px 2px black;
+        color: #E8EAF6;
+    }
 
-	.price {
-		text-decoration-line: underline;
-		color: red;
-	}
+    .PointS {
+        border-bottom: 1px solid #1A237E;
+        padding-top: calc(100% / 30);
+        padding-bottom: calc(100% / 30);
+    }
+
+    .NotPairPointS {
+        background-color: #C5CAE9;
+    }
+
+    .PodPointS {
+        font-size: 19px;
+        font-weight: 300;
+        display: inline-block;
+    }
+
+    .PriceS {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+        .PriceS > b {
+            font-weight: 300;
+            font-size: 20px;
+            display: block;
+        }
+
+    /* KONIEC! STYLOWANIE <li></li> BOXÓW Z OFERTĄ KONIEC!*/
+    .PodstawowySegment {
+    }
+
+    .KontenerKolumnyOferty {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cennik {
+        position: relative;
+        top: 0px;
+        height: calc(100% - 800px);
+        width: 100%;
+    }
+
+    .TrMargin {
+        padding-top: 30px;
+    }
+
+    .OpisCen1 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        transform: translateY(-50%);
+    }
+
+        .OpisCen1 > .Specyfic1 {
+            padding-top: 50px;
+            font-size: 30px;
+        }
+
+        .OpisCen1 > .Specyfic2 {
+            margin: 0;
+            padding: 0;
+            font-size: 30px;
+        }
+
+    .SklepInneB {
+        display: block;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        font-size: 30px;
+    }
+
+    #sklep5 > .OpisCen1 > h3 {
+        font-weight: 400;
+    }
+
+    #s1 {
+        position: relative;
+        background-repeat: no-repeat;
+        top: 0px;
+        height: calc(100vh - 100px);
+        width: 100%;
+        background-image: url(https://i.imgur.com/PuALwjL.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .TypImprezyOk {
+        width: 100%;
+        position: absolute;
+        top: 5vh;
+        left: 0;
+        font-size: 45px;
+        font-weight: 300;
+        text-align: center;
+        color: white;
+        text-shadow: 5px 5px 5px black;
+    }
+
+    .CenaImprezyOk {
+        position: absolute;
+        bottom: 5vh;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        text-shadow: 5px 5px 5px black;
+    }
+
+    .SmallOd {
+        font-weight: 400;
+        font-size: 25px;
+    }
+
+    .notSmallCena {
+        font-weight: 400;
+        font-size: 45px;
+    }
+
+    #s1btn {
+        background-color: #2962FF;
+        font-weight: 400;
+    }
+
+    #s2 {
+        background-repeat: no-repeat;
+        position: relative;
+        top: 0px;
+        height: calc(100vh - 100px);
+        width: 100%;
+        background-image: url(https://i.imgur.com/fozUes7.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #s3 {
+        background-repeat: no-repeat;
+        position: relative;
+        top: 0px;
+        height: calc(100vh - 100px);
+        width: 100%;
+        background-image: url(https://i.imgur.com/DMXZrfC.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #s4 {
+        background-repeat: no-repeat;
+        position: relative;
+        top: 0px;
+        height: calc(100vh - 100px);
+        width: 100%;
+        background-image: url(https://i.imgur.com/BOdN6Jj.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .NaglowekTabeli {
+        border-bottom: 4px solid #3F51B5;
+    }
+
+    #sklep1 {
+        position: absolute;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    #sklep2 {
+        position: absolute;
+        top: 0;
+        left: 5%;
+        vertical-align: middle;
+        top: 50%;
+        width: 90%;
+        transform: translateY(-50%);
+        display: none;
+    }
+
+    #sklep3 {
+        background-repeat: no-repeat;
+        position: relative;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        vertical-align: middle;
+        display: none;
+    }
+
+    #sklep4 {
+        background-repeat: no-repeat;
+        position: relative;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        vertical-align: middle;
+        display: none;
+    }
+
+        #sklep4 > .OpisCen1 > .tab2 {
+            width: 80%;
+            text-align: left;
+        }
+
+    #sklep5 {
+        vertical-align: middle;
+        height: 100%;
+        display: none;
+    }
+
+    #sklep1btn {
+        background-color: #2962FF;
+        font-weight: 400;
+    }
+
+    #info {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: 'Open Sans', sans-serif;
+        margin: 0 auto;
+        width: 40%;
+    }
+
+    .OpisCen {
+        top: 10px;
+        width: 100%;
+        text-align: center;
+        text-decoration-line: underline;
+        margin: 5 auto;
+        padding: 0;
+        font-size: 40px;
+        height: 10%;
+        position: relative;
+    }
+
+    .NaglowekB {
+        font-size: 19px;
+    }
+
+    .NaglowekB2 {
+        font-size: 24px;
+    }
+
+    .CasualRowRightCol {
+        border-right: 4px solid #3F51B5;
+    }
+
+    .CasualBottomColapse {
+        border-bottom: 1px solid #3F51B5;
+    }
+
+    .BoldBottomColapse {
+        border-bottom: 2px solid #3F51B5;
+        margin-bottom: 5px;
+        height: 45px;
+    }
+
+    .CasualSklepInneTd {
+        height: 50px;
+    }
+
+    #Sklep5Inne {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .txt {
+        font-size: 35px;
+    }
+
+    .tab1 {
+        position: absolute;
+        width: 90%;
+        left: 5%;
+        top: calc(15%);
+        height: 70%;
+        text-align: left;
+        font-size: 25px;
+        border-spacing: inherit;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    .tab2 {
+        width: 95%;
+        text-align: center;
+        font-size: 25px;
+        border-collapse: collapse;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .price {
+        text-decoration-line: underline;
+        color: red;
+    }
 
 
-	/*WYKLUCZONE*/
-	#MiniNawigator {
-		display: none;
-	}
+    /*WYKLUCZONE*/
+    #MiniNawigator {
+        display: none;
+    }
 
-	#MenuMiniBtn {
-		display: none;
-	}
+    #MenuMiniBtn {
+        display: none;
+    }
 
-	.Big-Invisible {
-		display: none;
-	}
+    .Big-Invisible {
+        display: none;
+    }
 
-	#Slick1L {
-		display: none;
-	}
+    #Slick1L {
+        display: none;
+    }
 
-	#IO18 {
-		display: none;
-	}
+    #IO18 {
+        display: none;
+    }
 
-	#IOrc {
-		display: none;
-	}
+    #IOrc {
+        display: none;
+    }
 
-	#IOc {
-		display: none;
-	}
+    #IOc {
+        display: none;
+    }
 
-	#IOi {
-		display: none;
-	}
+    #IOi {
+        display: none;
+    }
 
-	#HardBigInvisible {
-		display: none;
-	}
+    #HardBigInvisible {
+        display: none;
+    }
 }

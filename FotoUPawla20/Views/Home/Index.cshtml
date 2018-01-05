@@ -7,14 +7,26 @@
 <html lang="pl">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105797648-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-105797648-2');
+    </script>
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Foto u Pawła</title>
     <link rel="Shortcut icon" href="~/images/fup.ico">
-    
+
 
     <link href="~/css/Home/Responsive-BIG.css" rel="stylesheet" />
     <link href="~/css/Home/Responsive-mini.css" rel="stylesheet" />
+    <link href="~/css/Home/Responsive-nano.css" rel="stylesheet" />
     <link href="~/css/Home/Responsive-Unusual.css" rel="stylesheet" />
     <link href="~/css/Home/slick-theme.css" rel="stylesheet" />
     <link href="~/css/Home/slick.css" rel="stylesheet" />
@@ -619,10 +631,22 @@
             <div id="HardBigInvisible">
                 <div id="TouchToScroll" class="Big-Invisible">Dotknij aby przesunąć</div>
                 <div class="Big-Invisible" id="ImprezyOkolicznosciowe">
-                    <div id="IO18" class="ImpOkoMetro Big-Invisible">Rozpędzeni</div>
-                    <div id="IOrc" class="ImpOkoMetro Big-Invisible">Prosto</div>
-                    <div id="IOc" class="ImpOkoMetro Big-Invisible">W stronę</div>
-                    <div id="IOi" class="ImpOkoMetro Big-Invisible">Słońca</div>
+                    <div id="IO18" class="ImpOkoMetro Big-Invisible">
+                        <div class="TypImprezyOk">Osiemnastka</div>
+                        <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">350 zł</b></div>
+                    </div>
+                    <div id="IOrc" class="ImpOkoMetro Big-Invisible">
+                        <div class="TypImprezyOk">Rocznica ślubu</div>
+                        <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">400 zł</b></div>
+                    </div>
+                    <div id="IOc" class="ImpOkoMetro Big-Invisible">
+                        <div class="TypImprezyOk">Chrzest</div>
+                        <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">200 zł</b></div>
+                    </div>
+                    <div id="IOi" class="ImpOkoMetro Big-Invisible">
+                        <div class="TypImprezyOk">Sesja plenerowa<br /><b class="SmallOd">(+ studio podczas imprezy)</b></div>
+                        <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">300 zł</b></div>
+                    </div>
                 </div>
             </div>
 
@@ -632,39 +656,25 @@
             </div>
 
             <div class="Mini-invisible" id="Viewer3" style="width: 80%;">
-
                 <div id="s1">
-                    <div class="OpisCen">
-                        <p class="price">350zł</p> (do godz. 1.00)
-                    </div>
+                    <div class="TypImprezyOk">Osiemnastka</div>
+                    <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">350 zł</b></div>
                 </div>
 
                 <div id="s2" style="display: none">
-                    <div class="OpisCen">
-                        <p class="price">400zł</p> (do godz. 1.00)
-                    </div>
+                    <div class="TypImprezyOk">Rocznica ślubu</div>
+                    <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">400 zł</b></div>
                 </div>
 
                 <div id="s3" style="display: none">
-                    <div class="OpisCen">
-                        Kościół
-                        <p class="price">200zł</p> <br>Przygotowania + Kościół
-                        <p class="price">300zł</p>
-
-
-                    </div>
+                    <div class="TypImprezyOk">Chrzest</div>
+                    <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">200 zł</b></div>
                 </div>
 
                 <div id="s4" style="display: none">
-                    <div class="OpisCen">
-                        Sesja plenerowa ( 3 godz.)
-                        <p class="price">300zł</p>
-                        Mini studio podczas imprezy
-                        <p class="price">50zł</p><br>
-
-                    </div>
+                    <div class="TypImprezyOk">Sesja plenerowa (+ studio podczas imprezy)</div>
+                    <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">300 zł (+ 50 zł)</b></div>
                 </div>
-
             </div>
 
 
@@ -1029,18 +1039,23 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d582.198876308134!2d18.2249437!3d54.2898828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae57365eca056164!2sLaboratorium+i+Studio+Fotograficzne+%22Foto+u+Paw%C5%82a%22+Pawe%C5%82+Lehmann!5e0!3m2!1spl!2spl!4v1505596139815"
                             width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
+
+                <div id="mapkaNano" class="Big-Invisible OnlyMakro nanoInvisible">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d582.198876308134!2d18.2249437!3d54.2898828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae57365eca056164!2sLaboratorium+i+Studio+Fotograficzne+%22Foto+u+Paw%C5%82a%22+Pawe%C5%82+Lehmann!5e0!3m2!1spl!2spl!4v1505596139815"
+                            width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
             </div>
-            <div id="mapkaMini" class="Mini-invisible">
+            <div id="mapkaMini" class="Mini-invisible ">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d582.198876308134!2d18.2249437!3d54.2898828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae57365eca056164!2sLaboratorium+i+Studio+Fotograficzne+%22Foto+u+Paw%C5%82a%22+Pawe%C5%82+Lehmann!5e0!3m2!1spl!2spl!4v1505596139815"
                         width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <div id="mapkaMedium" class="Mini-invisible">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d582.198876308134!2d18.2249437!3d54.2898828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae57365eca056164!2sLaboratorium+i+Studio+Fotograficzne+%22Foto+u+Paw%C5%82a%22+Pawe%C5%82+Lehmann!5e0!3m2!1spl!2spl!4v1505596139815"
-                        width="600" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <div id="mapkaLarge" class="Mini-invisible">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d582.198876308134!2d18.2249437!3d54.2898828!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae57365eca056164!2sLaboratorium+i+Studio+Fotograficzne+%22Foto+u+Paw%C5%82a%22+Pawe%C5%82+Lehmann!5e0!3m2!1spl!2spl!4v1505596139815"
-                        width="800" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        width="601" height="501" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -1048,7 +1063,7 @@
     <!--Stopka-->
     <div id="Stopka" class="Mini-invisible">
         <ul>
-            <li id="StopkaLi0"><b>Codli</b><br />Projektowanie nowoczesnych aplikacji</li>
+            <li id="StopkaLi0"><b><a href="http://codli.eu" style="text-decoration: none;">codli.eu</a></b><br />Projektowanie nowoczesnych aplikacji</li>
             <li id="StopkaLi1"><b>Adres e-mail</b><br />kontakt@codli.eu</li>
             <li id="StopkaLi2"><b>Codli</b><br />Projektowanie nowoczesnych aplikacji</li>
             <li id="StopkaLi3"><b>Telefon</b><br />+48 883-761-687</li>
