@@ -20,6 +20,8 @@ namespace FotoUPawla20.Models
 
         public string[] GaleriaPlener { get; set; }
 
+        public string[] GaleriaBaner { get; set; }
+
 
         //Metody generujące skrypty
         public string SkryptGalerii1()

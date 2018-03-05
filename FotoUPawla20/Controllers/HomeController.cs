@@ -36,11 +36,8 @@ namespace FotoUPawla20.Controllers
 
             //Generowanie obrazka startowego
             Random losowyObrazek = new Random();
-            int numerObrazka = losowyObrazek.Next(0, 6);
 
             var Model = new HomeViewModel();
-
-            Model.ObrazekStartowy = "images/Home/start" + numerObrazka.ToString() + ".jpeg";
 
             //Generowanie skryptu obsługi galerii
             var ListaGalerii = (from a in db.Zdjecia select a).ToList<ZdjeciaModel>();
@@ -53,6 +50,7 @@ namespace FotoUPawla20.Controllers
                  3- Galeria ze zdjęciami z ceremoni
                  4- Galeria ze zdjęciami z imprezy weselnej
                  5- Galeria ze zdjęciami plenerowymi
+                 6- Galeria z obrazkami powitalnymi (baner startowy)
              
              */
 
@@ -61,6 +59,16 @@ namespace FotoUPawla20.Controllers
             Model.GaleriaCeremonia = SilnikGaleriowy(ListaGalerii, 3);
             Model.GaleriaWesele = SilnikGaleriowy(ListaGalerii, 4);
             Model.GaleriaPlener = SilnikGaleriowy(ListaGalerii, 5);
+            Model.GaleriaBaner = SilnikGaleriowy(ListaGalerii, 6);
+
+            //Generowanie obrazka startowego cz. 2
+            if (Model.GaleriaBaner.Length == 1)
+                Model.ObrazekStartowy = Model.GaleriaBaner[0];
+            else
+            {
+                int BanerOptions = Model.GaleriaBaner.Length - 1;
+                Model.ObrazekStartowy = Model.GaleriaBaner[losowyObrazek.Next(0, BanerOptions)];
+            }
 
             return View(Model);
         }
