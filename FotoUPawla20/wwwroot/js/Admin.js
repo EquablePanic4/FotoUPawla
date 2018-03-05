@@ -24,11 +24,11 @@ function AjaxAddPhoto(idElementu, GaleriaID) {
     $.ajax({
         type: "POST",
         url: "/Admin/AddGalleryPhoto/",
+        async: true,
         data: JSON,
         success: function (data) {
             //Czyszczenie formularza
             $(inputName).val("");
-
             alert("Pomyślnie dodano zdjęcie!");
         },
         error: function (e) {

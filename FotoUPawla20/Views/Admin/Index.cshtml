@@ -177,6 +177,73 @@
         </div>
     </div>
 
+    <div class="AdminSection">
+        <div class="Title">Zarządzanie pojedynczymi zdjęciami</div>
+        <div class="Container">
+            <table>
+                <tr class="TableHeader">
+                    <td>Miniaturka</td>
+                    <td>Sekcja</td>
+                    <td>Zmiana obrazka</td>
+                </tr>
+                <tr>
+                    <td><div style='background-image: url(@Model.PolyGaleria[0]); background-size: contain; width: 100%; height: 100px; background-repeat: no-repeat;'></div></td>
+                    <td>Zdjęcie pod napisem <i>Galeria</i></td>
+                    <td><input type="text" placeholder="Wprowadź adres bezpośredni do nowego zdjęcia..." id="PolyGaleria" style="width: 100%;" /><br /><button onclick="AjaxAddPhoto('PolyGaleria', 7)">Zmień</button></td>
+                </tr>
+                <tr>
+                    <td><div style='background-image: url(@Model.PolySlubna[0]); background-size: contain; width: 100%; height: 100px; background-repeat: no-repeat;'></div></td>
+                    <td>Zdjęcie pod napisem <i>Fotografia ślubna</i></td>
+                    <td><input type="text" placeholder="Wprowadź adres bezpośredni do nowego zdjęcia..." id="PolySlubna" style="width: 100%;" /><br /><button onclick="AjaxAddPhoto('PolySlubna', 8)">Zmień</button></td>
+                </tr>
+                <tr>
+                    <td><div style='background-image: url(@Model.PolyOferta[0]); background-size: contain; width: 100%; height: 100px; background-repeat: no-repeat;'></div></td>
+                    <td>Zdjęcie pod napisem <i>Oferta ślubna</i></td>
+                    <td><input type="text" placeholder="Wprowadź adres bezpośredni do nowego zdjęcia..." id="PolyOferta" style="width: 100%;" /><br /><button onclick="AjaxAddPhoto('PolyOferta', 9)">Zmień</button></td>
+                </tr>
+                <tr>
+                    <td><div style='background-image: url(@Model.PolyPakiety[0]); background-size: contain; width: 100%; height: 100px; background-repeat: no-repeat;'></div></td>
+                    <td>Zdjęcie pakietami weselnymi</td>
+                    <td><input type="text" placeholder="Wprowadź adres bezpośredni do nowego zdjęcia..." id="PolyPakiety" style="width: 100%;" /><br /><button onclick="AjaxAddPhoto('PolyPakiety', 10)">Zmień</button></td>
+                </tr>
+                <tr>
+                    <td><div style='background-image: url(@Model.PolyOkolicznosciowe[0]); background-size: contain; width: 100%; height: 100px; background-repeat: no-repeat;'></div></td>
+                    <td>Zdjęcie pod napisem <i>Imprezy okolicznościowe</i></td>
+                    <td><input type="text" placeholder="Wprowadź adres bezpośredni do nowego zdjęcia..." id="PolyOkolicznosciowe" style="width: 100%;" /><br /><button onclick="AjaxAddPhoto('PolyOkolicznosciowe', 11)">Zmień</button></td>
+                </tr>
+                <tr>
+                    <td><div style='background-image: url(@Model.PolyOsiemnastki[0]); background-size: contain; width: 100%; height: 100px; background-repeat: no-repeat;'></div></td>
+                    <td>Zdjęcie pod napisem <i>Osiemnastka</i></td>
+                    <td><input type="text" placeholder="Wprowadź adres bezpośredni do nowego zdjęcia..." id="PolyOsiemnastki" style="width: 100%;" /><br /><button onclick="AjaxAddPhoto('PolyOsiemnastki', 12)">Zmień</button></td>
+                </tr>
+                <tr>
+                    <td><div style='background-image: url(@Model.PolyRocznice[0]); background-size: contain; width: 100%; height: 100px; background-repeat: no-repeat;'></div></td>
+                    <td>Zdjęcie pod napisem <i>Rocznica ślubu</i></td>
+                    <td><input type="text" placeholder="Wprowadź adres bezpośredni do nowego zdjęcia..." id="PolyRocznice" style="width: 100%;" /><br /><button onclick="AjaxAddPhoto('PolyRocznice', 13)">Zmień</button></td>
+                </tr>
+                <tr>
+                    <td><div style='background-image: url(@Model.PolyChrzciny[0]); background-size: contain; width: 100%; height: 100px; background-repeat: no-repeat;'></div></td>
+                    <td>Zdjęcie pod napisem <i>Chrzciny</i></td>
+                    <td><input type="text" placeholder="Wprowadź adres bezpośredni do nowego zdjęcia..." id="PolyChrzciny" style="width: 100%;" /><br /><button onclick="AjaxAddPhoto('PolyChrzciny', 14)">Zmień</button></td>
+                </tr>
+                <tr>
+                    <td><div style='background-image: url(@Model.PolyInne[0]); background-size: contain; width: 100%; height: 100px; background-repeat: no-repeat;'></div></td>
+                    <td>Zdjęcie pod napisem <i>Inne</i></td>
+                    <td><input type="text" placeholder="Wprowadź adres bezpośredni do nowego zdjęcia..." id="PolyInne" style="width: 100%;" /><br /><button onclick="AjaxAddPhoto('PolyInne', 15)">Zmień</button></td>
+                </tr>
+                <tr>
+                    <td><div style='background-image: url(@Model.PolySklep[0]); background-size: contain; width: 100%; height: 100px; background-repeat: no-repeat;'></div></td>
+                    <td>Zdjęcie pod napisem <i>Sklep</i></td>
+                    <td><input type="text" placeholder="Wprowadź adres bezpośredni do nowego zdjęcia..." id="PolySklep" style="width: 100%;" /><br /><button onclick="AjaxAddPhoto('PolySklep', 16)">Zmień</button></td>
+                </tr>
+                <tr>
+                    <td><div style='background-image: url(@Model.PolyKontakt[0]); background-size: contain; width: 100%; height: 100px; background-repeat: no-repeat;'></div></td>
+                    <td>Zdjęcie pod napisem <i>Kontakt</i></td>
+                    <td><input type="text" placeholder="Wprowadź adres bezpośredni do nowego zdjęcia..." id="PolyKontakt" style="width: 100%;" /><br /><button onclick="AjaxAddPhoto('PolyKontakt', 17)">Zmień</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
     <div id="WidgetsFooterSeparator"></div>
     <div id="Skrypty">
 

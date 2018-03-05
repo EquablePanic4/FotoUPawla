@@ -18,5 +18,19 @@ namespace FotoUPawla20.Models
         public string[] CeremoniaGalleryDeleteArray { get; set; }
         public string[] WeseleGalleryDeleteArray { get; set; }
         public string[] PlenerGalleryDeleteArray { get; set; }
+
+        //Zmienne jednozdjęciowe
+        //[0] - adres do zdjęcia, [1] - id galerii (analogicznie od 7 wzwyż)
+        public string[] PolyGaleria { get; set; }
+        public string[] PolySlubna { get; set; }
+        public string[] PolyOferta { get; set; }
+        public string[] PolyPakiety { get; set; }
+        public string[] PolyOkolicznosciowe { get; set; }
+        public string[] PolyOsiemnastki { get; set; }
+        public string[] PolyRocznice { get; set; }
+        public string[] PolyChrzciny { get; set; }
+        public string[] PolyInne { get; set; }
+        public string[] PolySklep { get; set; }
+        public string[] PolyKontakt { get; set; }
     }
 }

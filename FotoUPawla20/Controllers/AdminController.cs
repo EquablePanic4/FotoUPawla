@@ -15,6 +15,7 @@ namespace FotoUPawla20.Controllers
     [Authorize]
     public class AdminController : Controller
     {
+        public string PrzerwaGalerii = "https://i.imgur.com/FiG0ZHG.jpg";
 
         private CustomModelsContext db;
 
@@ -87,6 +88,20 @@ namespace FotoUPawla20.Controllers
             AdminView.WeseleGalleryDeleteArray = GeneratorUsuwaczaZdjec(AllPhotos, 4);
             AdminView.PlenerGalleryDeleteArray = GeneratorUsuwaczaZdjec(AllPhotos, 5);
             AdminView.BanerGalleryDeleteArray = GeneratorUsuwaczaZdjec(AllPhotos, 6);
+
+            //Generowanie sekcji zdjęć pojedynczych
+            AdminView.PolyGaleria = GeneratorUsuwaczaZdjec(AllPhotos, 7);
+            AdminView.PolySlubna = GeneratorUsuwaczaZdjec(AllPhotos, 8);
+            AdminView.PolyOferta = GeneratorUsuwaczaZdjec(AllPhotos, 9);
+            AdminView.PolyPakiety = GeneratorUsuwaczaZdjec(AllPhotos, 10);
+            AdminView.PolyOkolicznosciowe = GeneratorUsuwaczaZdjec(AllPhotos, 11);
+            AdminView.PolyOsiemnastki = GeneratorUsuwaczaZdjec(AllPhotos, 12);
+            AdminView.PolyRocznice = GeneratorUsuwaczaZdjec(AllPhotos, 13);
+            AdminView.PolyChrzciny = GeneratorUsuwaczaZdjec(AllPhotos, 14);
+            AdminView.PolyInne = GeneratorUsuwaczaZdjec(AllPhotos, 15);
+            AdminView.PolySklep = GeneratorUsuwaczaZdjec(AllPhotos, 16);
+            AdminView.PolyKontakt = GeneratorUsuwaczaZdjec(AllPhotos, 17);
+            //I trzeba tutaj dopisać całą resztę z AdminViewModelu
 
             return View(AdminView);
         }
@@ -181,6 +196,33 @@ namespace FotoUPawla20.Controllers
         [HttpPost]
         public IActionResult AddGalleryPhoto(string AdresURL, int GaleriaID)
         {
+            //Jeżeli do metody trafiają zdjęcia z galerii jednozdjęciowych
+            if (GaleriaID >= 7)
+            {
+                var MonoPhoto = (from codli in db.Zdjecia where codli.GaleriaId == GaleriaID select codli).FirstOrDefault();
+
+                //Jeżeli jeszcze nie ma zdjęcia
+                if (MonoPhoto == null)
+                {
+                    MonoPhoto = new ZdjeciaModel();
+
+                    MonoPhoto.Path = AdresURL;
+                    MonoPhoto.GaleriaId = GaleriaID;
+
+                    db.Add(MonoPhoto);
+                    db.SaveChanges();
+
+                    return Content("Wykonano!");
+                }
+
+                MonoPhoto.Path = AdresURL;
+
+                db.Update(MonoPhoto);
+                db.SaveChanges();
+
+                return Content("Wykonano!");
+            }
+
             //Tworzenie obiektu rekordu LINQ
             var obiekt = new ZdjeciaModel()
             {
@@ -236,7 +278,6 @@ namespace FotoUPawla20.Controllers
 
             //Generowanie zakodowanego kodu na podstawie daty jego wygenerowania
             string sekwencja = rok + msc + dzien + godz + min + sek;
-            int Conte = 0;
             string kod = String.Empty;
 
             foreach (char e in sekwencja)
@@ -297,7 +338,23 @@ namespace FotoUPawla20.Controllers
              * 3) Galeria ceremonialna
              * 4) Galeria weselna
              * 5) Galeria plenerowa
+             * 6) Zdjęcia baneru powitalnego
+             * 7+) Zdjęcia CodliMono
              */
+
+            //Specjalna instrukcja jeżeli chodzi o zdjęcie CodliPoli
+            if (GaleriaID >= 7)
+            {
+                string PhotoURL = (from codli in WszystkieFoty where codli.GaleriaId == GaleriaID select codli.Path).FirstOrDefault();
+
+                if (String.IsNullOrEmpty(PhotoURL) == true)
+                    PhotoURL = PrzerwaGalerii;
+
+                string[] CodliReturns = new string[2] { PhotoURL, GaleriaID.ToString() };
+
+                return CodliReturns;
+            }
+
             char q = '"';
             var MainGalleryDeleteList = (from b in WszystkieFoty where b.GaleriaId == GaleriaID select b).ToList<ZdjeciaModel>();
             string[] Tablica = new string[MainGalleryDeleteList.Count()];
