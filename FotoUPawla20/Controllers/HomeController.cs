@@ -70,6 +70,24 @@ namespace FotoUPawla20.Controllers
                 Model.ObrazekStartowy = Model.GaleriaBaner[losowyObrazek.Next(0, BanerOptions)];
             }
 
+            //Generowanie MonoModelu
+            var MonoPhoto = new MonoPhotosModel()
+            {
+                PolyGaleria = SilnikGaleriowy(ListaGalerii, 7, true),
+                PolySlubna = SilnikGaleriowy(ListaGalerii, 8, true),
+                PolyOferta = SilnikGaleriowy(ListaGalerii, 9, true),
+                PolyPakiety = SilnikGaleriowy(ListaGalerii, 10, true),
+                PolyOkolicznosciowe = SilnikGaleriowy(ListaGalerii, 11, true),
+                PolyOsiemnastki = SilnikGaleriowy(ListaGalerii, 12, true),
+                PolyRocznice = SilnikGaleriowy(ListaGalerii, 13, true),
+                PolyChrzciny = SilnikGaleriowy(ListaGalerii, 14, true),
+                PolyInne = SilnikGaleriowy(ListaGalerii, 15, true),
+                PolySklep = SilnikGaleriowy(ListaGalerii, 16, true),
+                PolyKontakt = SilnikGaleriowy(ListaGalerii, 17, true),
+            };
+
+            Model.MonoModel = MonoPhoto;
+
             return View(Model);
         }
 
@@ -104,6 +122,21 @@ namespace FotoUPawla20.Controllers
             Model.TablicaURL = TablicaZdjecMobilnych(Nawigator);
 
             return View(Model);
+        }
+
+        private string SilnikGaleriowy(List<ZdjeciaModel> WszystkieZdjecia, int GaleriaID, bool MonoGaleria)
+        {
+            string PrzerwaIMG = "https://i.imgur.com/FiG0ZHG.jpg";
+
+            if (MonoGaleria == false)
+                return PrzerwaIMG;
+
+            string PhotoURL = (from Conte in WszystkieZdjecia where Conte.GaleriaId == GaleriaID select Conte.Path).FirstOrDefault();
+
+            if (String.IsNullOrEmpty(PhotoURL) == true)
+                PhotoURL = PrzerwaIMG;
+
+            return PhotoURL;
         }
 
         private string[] SilnikGaleriowy(List<ZdjeciaModel> WszystkieZdjecia, int GaleriaID)

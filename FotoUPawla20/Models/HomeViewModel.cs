@@ -9,19 +9,15 @@ namespace FotoUPawla20.Models
     {
         //Właściwości
         public string ObrazekStartowy { get; set; }
-
         public string[] Galeria1 { get; set; }
-
         public string[] GaleriaPrzygotowania { get; set; }
-
         public string[] GaleriaCeremonia { get; set; }
-
         public string[] GaleriaWesele { get; set; }
-
         public string[] GaleriaPlener { get; set; }
-
         public string[] GaleriaBaner { get; set; }
 
+        //Zdjęcia pojedyncze
+        public MonoPhotosModel MonoModel {get; set; }
 
         //Metody generujące skrypty
         public string SkryptGalerii1()

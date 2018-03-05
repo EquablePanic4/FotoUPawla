@@ -204,7 +204,7 @@
 
     <!--Segment z galerią główną-->
     <div id="Segment1" class="PodstawowySegment">
-        <div class="SegmentTittle" style="background-image: url(images/Home/textback0.jpeg);">
+        <div class="SegmentTittle" style="background-image: url(@Model.MonoModel.PolyGaleria);">
             <div class="AttachmentText" style="background-image: url(images/Home/ga.png);"></div>
         </div>
         <div class="ShadowDIVMini">
@@ -248,7 +248,7 @@
 
     <!--Segment z fotografią ślubną-->
     <div id="Segment2" class="PodstawowySegment">
-        <div class="SegmentTittle" style="background-image: url(images/Home/textback1.jpeg);">
+        <div class="SegmentTittle" style="background-image: url(@Model.MonoModel.PolySlubna);">
             <div class="AttachmentText" style="background-image: url(images/Home/fs.png);"></div>
         </div>
         <div class="ShadowDIVMini">
@@ -523,11 +523,11 @@
 
     <!--Segment z cennikiem ślubnym-->
     <div id="Segment3" class="PodstawowySegment">
-        <div class="SegmentTittle" style="background-image: url(images/Home/textback2.jpeg);">
+        <div class="SegmentTittle" style="background-image: url(@Model.MonoModel.PolyOferta);">
             <div class="AttachmentText" style="background-image: url(images/Home/os.png);"></div>
         </div>
         <div class="ShadowDIVMini">
-            <div id="OfertaBox" class="Mini-invisible">
+            <div id="OfertaBox" class="Mini-invisible" style="background-image: url(@Model.MonoModel.PolyPakiety)">
                 <div class="NormalCol NormalLine">
                     <div class="KontenerKolumnyOferty">
                         <ul class="NormalOfertaUl">
@@ -571,7 +571,7 @@
                 </div>
             </div>
 
-            <div id="OfertaBoxMini" class="Big-Invisible">
+            <div id="OfertaBoxMini" class="Big-Invisible" style="background-image: url(@Model.MonoModel.PolyPakiety)">
                 <div class="NormalCol NormalLine">
                     <div class="KontenerKolumnyOferty">
                         <ul class="NormalOfertaUl">
@@ -624,26 +624,26 @@
 
     <!--Segment z cennikiem oferty okolicznosciowej-->
     <div id="Segment4" class="PodstawowySegment">
-        <div class="SegmentTittle" style="background-image: url(images/Home/textback3.jpeg);">
+        <div class="SegmentTittle" style="background-image: url(@Model.MonoModel.PolyOkolicznosciowe);">
             <div class="AttachmentText" style="background-image: url(images/Home/io.png);"></div>
         </div>
         <div class="ShadowDIVMini">
             <div id="HardBigInvisible">
                 <div id="TouchToScroll" class="Big-Invisible">Dotknij aby przesunąć</div>
                 <div class="Big-Invisible" id="ImprezyOkolicznosciowe">
-                    <div id="IO18" class="ImpOkoMetro Big-Invisible">
+                    <div id="IO18" class="ImpOkoMetro Big-Invisible" style="background-image: url(@Model.MonoModel.PolyOsiemnastki)">
                         <div class="TypImprezyOk">Osiemnastka</div>
                         <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">350 zł</b></div>
                     </div>
-                    <div id="IOrc" class="ImpOkoMetro Big-Invisible">
+                    <div id="IOrc" class="ImpOkoMetro Big-Invisible" style="background-image: url(@Model.MonoModel.PolyRocznice)">
                         <div class="TypImprezyOk">Rocznica ślubu</div>
                         <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">400 zł</b></div>
                     </div>
-                    <div id="IOc" class="ImpOkoMetro Big-Invisible">
+                    <div id="IOc" class="ImpOkoMetro Big-Invisible" style="background-image: url(@Model.MonoModel.PolyChrzciny)">
                         <div class="TypImprezyOk">Chrzest</div>
                         <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">200 zł</b></div>
                     </div>
-                    <div id="IOi" class="ImpOkoMetro Big-Invisible">
+                    <div id="IOi" class="ImpOkoMetro Big-Invisible" style="background-image: url(@Model.MonoModel.PolyInne)">
                         <div class="TypImprezyOk">Sesja plenerowa<br /><b class="SmallOd">(+ studio podczas imprezy)</b></div>
                         <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">300 zł</b></div>
                     </div>
@@ -656,22 +656,22 @@
             </div>
 
             <div class="Mini-invisible" id="Viewer3" style="width: 80%;">
-                <div id="s1">
+                <div id="s1" style="background-image: url(@Model.MonoModel.PolyOsiemnastki)">
                     <div class="TypImprezyOk">Osiemnastka</div>
                     <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">350 zł</b></div>
                 </div>
 
-                <div id="s2" style="display: none">
+                <div id="s2" style="display: none; background-image: url(@Model.MonoModel.PolyRocznice);">
                     <div class="TypImprezyOk">Rocznica ślubu</div>
                     <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">400 zł</b></div>
                 </div>
 
-                <div id="s3" style="display: none">
+                <div id="s3" style="display: none; background-image: url(@Model.MonoModel.PolyChrzciny);">
                     <div class="TypImprezyOk">Chrzest</div>
                     <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">200 zł</b></div>
                 </div>
 
-                <div id="s4" style="display: none">
+                <div id="s4" style="display: none; background-image: url(@Model.MonoModel.PolyInne);">
                     <div class="TypImprezyOk">Sesja plenerowa (+ studio podczas imprezy)</div>
                     <div class="CenaImprezyOk"><b class="SmallOd">od</b> <b class="notSmallCena">300 zł (+ 50 zł)</b></div>
                 </div>
@@ -687,7 +687,7 @@
     </div>
     <!--Segment ze sklepem-->
     <div id="Segment5" class="PodstawowySegment">
-        <div class="SegmentTittle" style="background-image: url(images/Home/textback4.jpeg);">
+        <div class="SegmentTittle" style="background-image: url(@Model.MonoModel.PolySklep);">
             <div class="AttachmentText" style="background-image: url(images/Home/s.png);"></div>
         </div>
         <div class="ShadowDIVMini">
@@ -1025,7 +1025,7 @@
     </div>
     <!--Kontakt-->
     <div id="Segment6" class="PodstawowySegment">
-        <div class="SegmentTittle" style="background-image: url(images/Home/textback5.jpeg);">
+        <div class="SegmentTittle" style="background-image: url(@Model.MonoModel.PolyKontakt);">
             <div class="AttachmentText" style="background-image: url(images/Home/k.png);"></div>
         </div>
         <div id="Viewer5">
