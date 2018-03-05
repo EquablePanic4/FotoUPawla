@@ -86,6 +86,7 @@ namespace FotoUPawla20.Controllers
             AdminView.CeremoniaGalleryDeleteArray = GeneratorUsuwaczaZdjec(AllPhotos, 3);
             AdminView.WeseleGalleryDeleteArray = GeneratorUsuwaczaZdjec(AllPhotos, 4);
             AdminView.PlenerGalleryDeleteArray = GeneratorUsuwaczaZdjec(AllPhotos, 5);
+            AdminView.BanerGalleryDeleteArray = GeneratorUsuwaczaZdjec(AllPhotos, 6);
 
             return View(AdminView);
         }

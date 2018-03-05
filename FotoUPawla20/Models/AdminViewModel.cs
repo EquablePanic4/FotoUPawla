@@ -12,6 +12,7 @@ namespace FotoUPawla20.Models
         public string OczekujacyKlienci { get; set; }
 
         //Tablice
+        public string[] BanerGalleryDeleteArray { get; set; }
         public string[] MainGalleryDeleteArray { get; set; }
         public string[] PrzygotowaniaGalleryDeleteArray { get; set; }
         public string[] CeremoniaGalleryDeleteArray { get; set; }

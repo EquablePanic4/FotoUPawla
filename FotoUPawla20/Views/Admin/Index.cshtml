@@ -82,6 +82,9 @@
     <div class="AdminSection">
         <div class="Title">Dodaj zdjęcia</div>
         <div class="Container">
+            <h3>Zdjęcia wyświetlające się na banerze powitalnym</h3>
+            <input type="text" placeholder="Adres bezpośredni" name="MainGalleryPhotoUrl" id="AddPhotoToGalleryTextBaner" />
+            <input type="button" name="SubmitMainGalleryPhoto" value="Zatwierdź" onclick="AjaxAddPhoto('AddPhotoToGalleryTextBaner', 6)" />
 
             <h3>Galeria główna</h3>
             <input type="text" placeholder="Adres bezpośredni" name="MainGalleryPhotoUrl" id="AddPhotoToGalleryTextMain" />
@@ -109,6 +112,17 @@
     <div class="AdminSection">
         <div class="Title">Usuń zdjęcia</div>
         <div class="Container">
+            <h3>Zdjęcia wyświetlające się na banerze powitalnym</h3>
+            <table>
+                <tr class="TableHeader">
+                    <td>Miniaturka</td>
+                    <td>Usuwanie</td>
+                </tr>
+
+                @foreach (var e in Model.BanerGalleryDeleteArray)
+        {@Html.Raw(e)}
+            </table>
+
             <h3>Galeria główna</h3>
             <table>
                 <tr class="TableHeader">
@@ -117,7 +131,7 @@
                 </tr>
 
                 @foreach (var e in Model.MainGalleryDeleteArray)
-                    {@Html.Raw(e)}
+        {@Html.Raw(e)}
             </table>
 
             <h3>Galeria przygotowaniowa</h3>
@@ -127,7 +141,7 @@
                     <td>Usuwanie</td>
                 </tr>
                 @foreach (var e in Model.PrzygotowaniaGalleryDeleteArray)
-                    {@Html.Raw(e)}
+        {@Html.Raw(e)}
             </table>
 
             <h3>Galeria ceremonialna</h3>
@@ -137,7 +151,7 @@
                     <td>Usuwanie</td>
                 </tr>
                 @foreach (var e in Model.CeremoniaGalleryDeleteArray)
-                    {@Html.Raw(e)}
+        {@Html.Raw(e)}
             </table>
 
             <h3>Galeria weselna</h3>
@@ -147,7 +161,7 @@
                     <td>Usuwanie</td>
                 </tr>
                 @foreach (var e in Model.WeseleGalleryDeleteArray)
-                    {@Html.Raw(e)}
+        {@Html.Raw(e)}
             </table>
 
             <h3>Galeria plenerowa</h3>
@@ -157,7 +171,7 @@
                     <td>Usuwanie</td>
                 </tr>
                 @foreach (var e in Model.PlenerGalleryDeleteArray)
-                    {@Html.Raw(e)}
+        {@Html.Raw(e)}
             </table>
 
         </div>
